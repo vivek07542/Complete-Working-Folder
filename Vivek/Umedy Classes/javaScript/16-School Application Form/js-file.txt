@@ -1,0 +1,49 @@
+// Function For to Avoid Extra Space
+function validate(input){
+  if(/^\s/.test(input.value))
+    input.value = '';
+}
+
+var btnSubmit = document.getElementById("btnSubmit");
+var userFirstName = document.getElementById("userFirstName");
+var userLastName = document.getElementById("userLastName");
+var validation = document.getElementsByClassName("invalid-feedback");
+var txtUserAddress=document.getElementById("txtUserAddress");
+btnSubmit.addEventListener("click",function(){
+  if(userFirstName.value == ""){
+    userFirstName.setAttribute("style","border:2px solid red");    
+    // alert(validation[0].innerHTML);
+    let divFirstName=document.getElementById("divFirstName");
+    let invalidFirstName = document.createElement("div");
+    invalidFirstName.innerHTML=validation[0].innerHTML;
+    invalidFirstName.style.color="red"; 
+    invalidFirstName.style.fontSize="12px";   
+    divFirstName.appendChild(invalidFirstName);
+  }
+  if(userLastName.value == ""){
+    userLastName.setAttribute("style","border:2px solid red");    
+    // alert(validation[1].innerHTML);
+    let divLastName=document.getElementById("divLastName");
+    let invalidLastName = document.createElement("div");
+    invalidLastName.innerHTML=validation[1].innerHTML;
+    invalidLastName.style.color="red"; 
+    invalidLastName.style.fontSize="12px";   
+    divLastName.appendChild(invalidLastName);
+  }
+  if(txtUserAddress.value== ""){
+    txtUserAddress.setAttribute("style","border:2px solid red");    
+    // alert(validation[4].innerHTML);
+    let divAddress=document.getElementById("divAddress");
+    let invalidAddress = document.createElement("div");
+    invalidAddress.innerHTML=validation[4].innerHTML;
+    invalidAddress.style.color="red"; 
+    invalidAddress.style.fontSize="12px";   
+    divAddress.appendChild(invalidAddress);
+  }
+  else{
+    userFirstName.setAttribute("style","border:2px solid green");
+    userLastName.setAttribute("style","border:2px solid green");
+    txtUserAddress.setAttribute("style","border:2px solid green");    
+
+  }
+});

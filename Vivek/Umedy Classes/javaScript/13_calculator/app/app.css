@@ -1,0 +1,92 @@
+body{
+  margin:0;
+  padding:0;
+  /* background-color: sandybrown; */
+}
+.container{
+  height:300px;      
+  border:1px solid black;
+  margin:50px auto;
+  padding-left:25px;
+  padding-top:30px;
+  max-width: 300px;
+}
+
+.displayScreen{
+  width:90%;
+  height:60px;
+  background-color: blue;
+  color:white;
+  font-size: 25px;
+  text-align: right;
+}
+.numberBtn{
+  width:22%;  
+  margin-top:10px;
+  height:40px;
+  background-color: black;
+  color:white;
+  font-size: 22px;
+  font-weight2550;
+  border-radius:3px;
+}
+.sumBtn{
+  width:22%;
+  margin-top:10px;
+  height:40px;
+  background-color:#cc5c11;
+  color:white;
+  font-size: 22px;
+  font-weight2550;
+  border-radius:3px;
+}
+.subBtn{
+  width:22%;
+  margin-top:10px;
+  height:40px;
+  background-color: #ba55d3;
+  color:white;
+  font-size: 22px;
+  font-weight2550;
+  border-radius:3px;
+}
+.multiBtn{
+  width:22%;
+  margin-top:10px;
+  height:40px;
+  background-color: #7db1b2;
+  color:white;
+  font-size: 22px;
+  font-weight2550;
+  border-radius:3px;
+}
+.divideBtn{
+  width:22%;
+  margin-top:10px;
+  height:40px;
+  background-color:#008000;
+  color:white;
+  font-size: 22px;
+  font-weight2550;
+  border-radius:3px;
+}
+.resetBtn{
+  width:22%;
+  margin-top:10px;
+  height:40px;
+  background-color: black;
+  color:white;
+  font-size: 22px;
+  font-weight2550;
+  border-radius:3px;
+}
+.resultBtn{
+  width:22%;
+  margin-top:10px;
+  height:40px;
+  background-color: #cc0000;
+  color:white;
+  font-size: 22px;
+  font-weight:650;
+  border-radius:3px;
+}

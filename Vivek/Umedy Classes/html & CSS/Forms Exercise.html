@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<!-- saved from url=(0055)http://webdev.slides.com/coltsteele/forms-exercise-52#/ -->
+<html class="sl-root decks show mz-history mz-svg mz-localstorage mz-csspositionsticky mz-supports mz-cssanimations mz-backgroundsize mz-no-cssgridlegacy mz-cssgrid mz-flexbox mz-csstransforms mz-csstransforms3d mz-csstransitions mz-fullscreen mz-webpanimation loaded ua-windows ua-chrome has-visible-scrollbars fonts-are-ready reveal-is-ready" data-account=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+
+    <title>Forms Exercise</title>
+    <meta name="description" content="A presentation created with Slides.">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <meta property="og:title" content="Forms Exercise">
+    <meta property="og:description" content="A presentation created with Slides.">
+    <meta property="og:site_name" content="Slides">
+    <meta property="og:image" content="https://s3.amazonaws.com/media-p.slid.es/thumbnails/secure/5fdf43/decks.jpg">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="http://webdev.slides.com/coltsteele/forms-exercise-52">
+    <meta property="fb:app_id" content="146002942236376">
+
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <link rel="manifest" href="http://webdev.slides.com/manifest.json">
+
+    <link href="./Forms Exercise_files/css2" rel="stylesheet" type="text/css" data-application-font="inter">
+
+    <link rel="stylesheet" media="all" href="./Forms Exercise_files/slides-bdecdb9d1bd594d8363319a2c80bb2b1bbc1c0b419e73fcf547354738a67ce6d.css">
+    <link rel="stylesheet" media="all" href="./Forms Exercise_files/application-d6d480cf301180e1cc2d6971b14e72b2b19d616f7f9bf4937a44cf4f6c39ff31.css">
+    	<link rel="stylesheet" media="all" href="./Forms Exercise_files/deck-v2-e3d6305a9528214fc9294bb9a1310f8589a8069a2d07f29f86daeffae3ec0eda.css">
+
+<style id="global-css-output" type="text/css"></style>
+
+
+<style id="user-css-output" type="text/css"></style>
+
+    <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="KSqECAQ2Vb2NDjSivmqADtNYT1anNkPm1UibpPOANzQUO6uCrSCg+xhvqy8oW5VruGUlBauIew9C9LRK83oahQ==">
+    <script type="application/javascript" async="" defer="" src="./Forms Exercise_files/track.js.download"></script><script type="text/javascript" async="" src="./Forms Exercise_files/f7sH7NavrjjvuGxByaw.js.download"></script><script async="" src="./Forms Exercise_files/analytics.js.download"></script><script type="text/javascript">
+  if( navigator.doNotTrack !== '1' && !/dnt=1/.test( window.location.search ) ) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-39670045-1', 'auto');
+    ga('send', 'pageview');
+
+  }
+</script>
+    	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@Slides">
+	<meta name="twitter:title" content="Forms Exercise">
+	<meta name="twitter:description" content="A presentation created with Slides.">
+	<meta name="twitter:image" content="https://s3.amazonaws.com/media-p.slid.es/thumbnails/secure/5fdf43/decks.jpg">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <style type="text/css"></style><link rel="stylesheet" href="./Forms Exercise_files/montserrat.css"><link rel="stylesheet" href="./Forms Exercise_files/opensans.css"><style type="text/css" media="screen">.uv-icon{box-sizing:border-box;display:inline-block;cursor:pointer;position:relative;transition:all 300ms;width:39px;height:39px;position:fixed;z-index:100002;opacity:0.8;transition:opacity 100ms}.uv-icon.uv-bottom-right{bottom:10px;right:12px}.uv-icon.uv-top-right{top:10px;right:12px}.uv-icon.uv-bottom-left{bottom:10px;left:12px}.uv-icon.uv-top-left{top:10px;left:12px}.uv-icon.uv-is-selected{opacity:1}.uv-icon svg{width:39px;height:39px}.uv-icon .uv-tooltip-container{position:relative}.uv-icon .uv-tooltip-container .uv-icon-tooltip{display:none;position:absolute;height:20px;padding:4px 8px;background-color:#464653;color:white;font-size:12px;border-radius:4px;line-height:18px;font-family:"Open Sans", sans-serif;white-space:nowrap}.uv-icon .uv-tooltip-container .uv-icon-tooltip.left,.uv-icon .uv-tooltip-container .uv-icon-tooltip.right{top:0;bottom:0;margin:auto 10px}.uv-icon .uv-tooltip-container .uv-icon-tooltip.top,.uv-icon .uv-tooltip-container .uv-icon-tooltip.bottom{transform:translate(-30%);margin:10px auto}.uv-icon .uv-tooltip-container .uv-icon-tooltip.top{bottom:100%}.uv-icon .uv-tooltip-container .uv-icon-tooltip.bottom{top:100%}.uv-icon .uv-tooltip-container .uv-icon-tooltip.left{right:100%}.uv-icon .uv-tooltip-container .uv-icon-tooltip.right{left:100%}.uv-icon .uv-tooltip-container:hover .uv-icon-tooltip{display:block}.uv-icon-trigger{display:block;width:39px;height:39px;border:none;padding:0;cursor:pointer;background:none}.uv-popover{font-family:sans-serif;font-weight:100;font-size:13px;color:black;position:fixed;z-index:100001}.uv-popover-content{border-radius:5px;background:white;border:1px solid transparent;position:relative;width:325px;height:325px;transition:background 200ms}.uv-bottom .uv-popover-content{box-shadow:rgba(0,0,0,0.3) 0 -10px 60px,rgba(0,0,0,0.1) 0 0 20px}.uv-top .uv-popover-content{box-shadow:rgba(0,0,0,0.3) 0 10px 60px,rgba(0,0,0,0.1) 0 0 20px}.uv-left .uv-popover-content{box-shadow:rgba(0,0,0,0.3) 10px 0 60px,rgba(0,0,0,0.1) 0 0 20px}.uv-right .uv-popover-content{box-shadow:rgba(0,0,0,0.3) -10px 0 60px,rgba(0,0,0,0.1) 0 0 20px}.uv-ie8 .uv-popover-content{position:relative}.uv-ie8 .uv-popover-content .uv-popover-content-shadow{display:block;background:black;content:'';position:absolute;left:-15px;top:-15px;width:100%;height:100%;filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius=15,MakeShadow=true,ShadowOpacity=0.30);z-index:-1}.uv-popover-tail{border:9px solid transparent;width:0;z-index:10;position:absolute;transition:border-top-color 200ms}.uv-top .uv-popover-tail{bottom:-20px;border-top:11px solid white}.uv-bottom .uv-popover-tail{top:-20px;border-bottom:11px solid white}.uv-left .uv-popover-tail{right:-20px;border-left:11px solid white}.uv-right .uv-popover-tail{left:-20px;border-right:11px solid white}.uv-popover-loading{background:white;border-radius:5px;position:absolute;width:100%;height:100%;left:0;top:0}.uv-popover-loading-text{position:absolute;top:50%;margin-top:-0.5em;width:100%;text-align:center}.uv-popover-iframe-container{height:100%}.uv-popover-iframe{border-radius:5px;overflow:hidden}.uv-is-hidden{display:none}.uv-is-invisible{display:block !important;visibility:hidden !important}.uv-is-transitioning{display:block !important}.uv-no-transition{transition:none !important}.uv-fade{opacity:1;transition:opacity 200ms ease-out}.uv-fade.uv-is-hidden{opacity:0}.uv-scale-top,.uv-scale-top-left,.uv-scale-top-right,.uv-scale-bottom,.uv-scale-bottom-left,.uv-scale-bottom-right,.uv-scale-right,.uv-scale-right-top,.uv-scale-right-bottom,.uv-scale-left,.uv-scale-left-top,.uv-scale-left-bottom,.uv-slide-top,.uv-slide-bottom,.uv-slide-left,.uv-slide-right{opacity:1;transition:all 80ms ease-out}.uv-scale-top.uv-is-hidden{opacity:0;transform:scale(0.8) translateY(-15%)}.uv-scale-top-left.uv-is-hidden{opacity:0;transform:scale(0.8) translateY(-15%) translateX(-10%)}.uv-scale-top-right.uv-is-hidden{opacity:0;transform:scale(0.8) translateY(-15%) translateX(10%)}.uv-scale-bottom.uv-is-hidden{opacity:0;transform:scale(0.8) translateY(15%)}.uv-scale-bottom-left.uv-is-hidden{opacity:0;transform:scale(0.8) translateY(15%) translateX(-10%)}.uv-scale-bottom-right.uv-is-hidden{opacity:0;transform:scale(0.8) translateY(15%) translateX(10%)}.uv-scale-right.uv-is-hidden{opacity:0;transform:scale(0.8) translateX(15%)}.uv-scale-right-top.uv-is-hidden{opacity:0;transform:scale(0.8) translateX(15%) translateY(-10%)}.uv-scale-right-bottom.uv-is-hidden{opacity:0;transform:scale(0.8) translateX(15%) translateY(10%)}.uv-scale-left.uv-is-hidden{opacity:0;transform:scale(0.8) translateX(-15%)}.uv-scale-left-top.uv-is-hidden{opacity:0;transform:scale(0.8) translateX(-15%) translateY(-10%)}.uv-scale-left-bottom.uv-is-hidden{opacity:0;transform:scale(0.8) translateX(-15%) translateY(10%)}.uv-slide-top.uv-is-hidden{transform:translateY(-100%)}.uv-slide-bottom.uv-is-hidden{transform:translateY(100%)}.uv-slide-left.uv-is-hidden{transform:translateX(-100%)}.uv-slide-right.uv-is-hidden{transform:translateX(100%)}
+</style><script type="text/javascript" src="./Forms Exercise_files/zoom-a5d62a27f9dd7ce53da982c71e540b906097da17f6aadaf4d6532ff16c39d0c4.js.download"></script><style></style><script type="text/javascript" async="" src="./Forms Exercise_files/embed.js.download"></script><link rel="prefetch" as="style" href="https://c.disquscdn.com/next/embed/styles/lounge.5c5dad4ae74bbb3422efd01116dc45e6.css"><link rel="prefetch" as="script" href="https://c.disquscdn.com/next/embed/common.bundle.f9554506a08a1cc2b021f0dfc3f59ebb.js"><link rel="prefetch" as="script" href="https://c.disquscdn.com/next/embed/lounge.bundle.907072d563117313785716c7fb3237d9.js"><link rel="prefetch" as="script" href="https://disqus.com/next/config.js"></head>
+  <body cz-shortcut-listen="true" style="transition: -webkit-transform 0.8s ease 0s;">
+    
+    <div id="container" class="container">
+      <header class="global-header show-on-scroll">
+  <div class="wrapper">
+    <div class="slides-logo logo-image-or-text">
+      <a href="http://webdev.slides.com/">
+        webdev
+      </a>
+    </div>
+    <div class="nav-wrapper">
+      <ul class="nav">
+
+          <li class="nav-item">
+            <a class="nav-item-anchor" href="http://webdev.slides.com/users/sign_in">
+              <span class="nav-item-label">Log in</span>
+            </a>
+          </li>
+
+      </ul>
+    </div>
+  </div>
+</header>
+
+      
+      <div id="main" class="main " role="main">
+        
+
+
+
+
+
+
+
+<div class="marquee">
+
+	<div class="reveal-frame">
+		<div class="reveal-viewport theme-font-montserrat theme-color-black-mint">
+			<div class="reveal slide embedded has-horizontal-slides ready" role="application" data-transition-speed="default" data-background-transition="slide">
+				<div class="slides" style="width: 960px; height: 700px; left: 50%; top: 50%; bottom: auto; right: auto; transform: translate(-50%, -50%) scale(0.651429);">
+					<section class="present" style="display: block;"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 250px; height: auto;" data-block-id="68ec9e3dc84e014df10b5e6c9213373a"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Forms Exercise</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 331px;" data-block-id="cb79bbb365817347377f25882425b033"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; color: rgb(106, 168, 79);">
+<p>Creating a Registration Form</p>
+</div></div></section><section hidden="" aria-hidden="true" class="future" style="display: block;"><div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 586.253px; height: 247px; left: 187px; top: 227px;" data-block-id="96ccbca5f5c3b6babf723d0e38389966"><div class="sl-block-content" style="z-index: 10;"><img data-natural-width="591" data-natural-height="249" src="./Forms Exercise_files/096a3211901cfd2394641bbd29569bcc.png" data-lazy-loaded=""></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 673px; left: 144px; top: 104px;" data-block-id="9ca8517cdc7ef583e76c4b8a6eaae577"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; color: rgb(106, 168, 79);">
+<h1>Create this form:</h1>
+</div></div></section><section hidden="" aria-hidden="true" class="future" style="display: block;"><div class="sl-block" data-block-type="image" style="width: 586.253px; height: 247px; left: 189px; top: 367px;" data-block-id="f63d7c1644df6f0cfc8f6c74983ca673"><div class="sl-block-content" style="z-index: 11;"><img data-natural-width="591" data-natural-height="249" src="./Forms Exercise_files/096a3211901cfd2394641bbd29569bcc.png" data-lazy-loaded=""></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 673px; left: 145px; top: 54px;" data-block-id="ea5b4ceed7c09f375da30b37a05fe933"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; color: rgb(106, 168, 79);">
+<h1>Hints</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 380px; left: 290px; top: 151px;" data-block-id="533d93c4c70087d16f71ebe64ddf954a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; line-height: 0.858;" data-has-line-height="">
+<p>You'll need to use:</p>
+
+<ul>
+	<li><span style="font-size:0.7em">Text Input</span></li>
+	<li><span style="font-size:0.7em">Password Input</span></li>
+	<li><span style="font-size:0.7em">Email Input</span></li>
+	<li><span style="font-size:0.7em">Radio Buttons</span></li>
+	<li><span style="font-size:0.7em">Select Tag</span></li>
+	<li><span style="font-size:0.7em">Checkbox Input</span></li>
+</ul>
+
+<p>&nbsp;</p>
+</div></div></section><section hidden="" aria-hidden="true" class="future" style="display: none;"><div class="sl-block" data-block-type="image" style="width: 586px; height: 282.683px; left: 187px; top: 249px;" data-block-id="b49b3f56e789f3dcffebb4bace549306"><div class="sl-block-content" style="z-index: 10;"><img data-natural-width="568" data-natural-height="274" data-src="https://i.gyazo.com/9cec9ea05ba35b440492bfe33584abf6.gif"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 687px; left: 137px; top: 191px;" data-block-id="b4173f6b39f4481334478111f79b76c4"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; color: rgb(106, 168, 79);">
+<p>First Name, Last Name, and Email are required</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 331px;" data-block-id="875742e658f5c63222f3fdc41fd31132"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;"><p>Text</p></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 181px; top: 81px;" data-block-id="19db38ec42c02dca02ddf9d83308bceb"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<h1>Validations</h1>
+</div></div></section><section hidden="" aria-hidden="true" class="future" style="display: none;"><div class="sl-block" data-block-type="image" style="width: 586px; height: 265.814px; left: 188px; top: 255px;" data-block-id="30b1b2c06c0a177c00173ef163e69273"><div class="sl-block-content" style="z-index: 10;"><img data-natural-width="582" data-natural-height="264" data-src="https://i.gyazo.com/8a55a46ac9270b2f9160db8be9641ad7.gif"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 687px; left: 138px; top: 171px;" data-block-id="d8ed8168f4fa1b62c5a9cc0e1152e64d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; color: rgb(106, 168, 79);">
+<p>Email must be a valid email address</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 181px; top: 58px;" data-block-id="ae83b7572629fe0b3c3f887fed71c43d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<h1>Validations</h1>
+</div></div></section><section hidden="" aria-hidden="true" class="future" style="display: none;"><div class="sl-block" data-block-type="image" style="width: 586px; height: 255.488px; left: 187px; top: 239px;" data-block-id="1aa0ab16fd65fd96e99a1046744f74df"><div class="sl-block-content" style="z-index: 11;"><img data-natural-width="578" data-natural-height="252" data-src="https://i.gyazo.com/afd523d2f5bc09c0ac9007fc2ab09b9c.gif"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 687px; left: 137px; top: 171px;" data-block-id="8c83dc269ec93c4a9bf987037b1dce85"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; color: rgb(106, 168, 79);">
+<p>Password must be between 5 and 10 characters</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 687px; left: 137px; top: 528px;" data-block-id="824971c7ec7335e886cfe31906f67671"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; color: rgb(230, 145, 56);">
+<p>Use HTML5, no JS allowed.&nbsp;You'll need to do some research on your own.</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 179px; top: 58px;" data-block-id="1d332aab9db6179133312d67dec9bfbf"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<h1>BONUS</h1>
+</div></div></section><section hidden="" aria-hidden="true" class="future" style="display: none;"><div class="sl-block" data-block-type="image" style="width: 586px; height: 263.801px; left: 187px; top: 235px;" data-block-id="8c405e9e1afe1d34cb769801e8c83946"><div class="sl-block-content" style="z-index: 11;"><img data-natural-width="582" data-natural-height="262" data-src="https://i.gyazo.com/e850678e8a1defdd5eec57048a197672.gif"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 687px; left: 137px; top: 171px;" data-block-id="22035247fac29ac2bb0be0c63b8109c1"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; color: rgb(106, 168, 79);">
+<p>3 drop down menus for month, day, and year</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 687px; left: 137px; top: 528px;" data-block-id="013d19db0e5090d071b0afd15f95f548"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; color: rgb(230, 145, 56);">
+<p>You don't need to do all the days and years</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 58px;" data-block-id="2cea8fa1fc4fdf39ee8aff8fdbd27777"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<h1>Birthday</h1>
+</div></div></section>
+				</div>
+				<div class="deck-kudos" style="opacity: 1;">
+					<button class="kudos-button kudos-trigger" data-kudos-id="524189" data-kudoed-by-user="false">
+						<div class="kudos-heart">
+							<span class="kudos-icon icon i-heart-fill"></span>
+						</div>
+						<div class="kudos-count" data-kudos-value="463" data-kudos-id="524189"></div>
+					</button>
+				</div>
+			<div class="backgrounds"><div class="slide-background present" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background future" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background future" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div></div><div class="slide-number" style="display: none;"></div><aside class="controls" data-controls-layout="bottom-right" data-controls-back-arrows="faded" style="display: block;"><button class="navigate-left" aria-label="previous slide" disabled="disabled"><div class="controls-arrow"></div></button>
+			<button class="navigate-right enabled highlight" aria-label="next slide"><div class="controls-arrow"></div></button>
+			<button class="navigate-up" aria-label="above slide" disabled="disabled"><div class="controls-arrow"></div></button>
+			<button class="navigate-down" aria-label="below slide" disabled="disabled"><div class="controls-arrow"></div></button></aside><div class="progress" style="display: block;"><span style="transform: scaleX(0);"></span></div><div class="speaker-notes" data-prevent-swipe="" tabindex="0"></div><div class="pause-overlay"><button class="resume-button">Resume presentation</button></div><div class="aria-status" aria-live="polite" aria-atomic="true" style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);">Forms Exercise Creating a Registration Form </div></div>
+		</div>
+	</div>
+
+	<div class="pill summary-pill" style="left: 542px;">
+		<div class="pill-picture" style="background-image: url(https://lh5.googleusercontent.com/-vMMJXQia7VE/AAAAAAAAAAI/AAAAAAAAAGs/g0BP_WxkIR8/photo.jpg)"></div>
+		<div class="pill-content">
+			<h4 class="pill-title">Forms Exercise</h4>
+			<p class="pill-description">By Colt Steele</p>
+		</div>
+	</div>
+
+	<div class="pill instructions-pill" style="left: 564px;">
+		<div class="pill-picture"></div>
+		<div class="pill-content">
+			<h4 class="pill-title"></h4>
+			<p class="pill-description"></p>
+		</div>
+	</div>
+
+</div>
+
+
+<div class="column">
+	<header class="deck-card ">
+		<div class="deck-card-header">
+				<div class="deck-social">
+					<a href="http://www.facebook.com/sharer.php?s=100&amp;p[title]=Forms%20Exercise&amp;p[summary]=A%20presentation%20created%20with%20Slides.&amp;p[url]=http://webdev.slides.com/coltsteele/forms-exercise-52&amp;p[images][0]=https://s3.amazonaws.com/media-p.slid.es/thumbnails/secure/5fdf43/decks.jpg" class="deck-social-button facebook-share-button" data-tooltip="Share on Facebook">
+					</a>
+					<a href="http://twitter.com/share?text=Forms%20Exercise&amp;url=http%3A%2F%2Fwebdev.slides.com%2Fcoltsteele%2Fforms-exercise-52&amp;via=slides" class="deck-social-button twitter-share-button" data-tooltip="Share on Twitter">
+						<span class="icon i-twitter"></span>
+					</a>
+				</div>
+
+			<div class="deck-options">
+				<a class="button white fullscreen-button" data-tooltip="Fullscreen" href="http://webdev.slides.com/coltsteele/forms-exercise-52/fullscreen"><span class="icon i-fullscreen"></span></a>
+				<a class="button white comment-button" data-tooltip="Comments" data-scroll-to="" href="http://webdev.slides.com/coltsteele/forms-exercise-52#comments" data-scroll-to-offset="-90"><span class="icon i-comment-stroke"></span></a>
+				<button class="button white share-button" data-tooltip="Share"><span class="icon i-share"></span></button>
+			</div>
+
+		</div>
+
+
+		<div class="clear"></div>
+
+		<div class="deck-card-body">
+			<div class="deck-info">
+				<h1 class="title">Forms Exercise</h1>
+				<ul class="deck-meta">
+					<li data-tooltip="Published date" data-tooltip-delay="500">
+						<span class="icon i-clock"></span>
+						<time class="value ago" datetime="2015-10-24 07:26:07 UTC">5 years ago</time>
+					</li>
+					<li data-tooltip="Kudos" data-tooltip-delay="500">
+						<span class="icon i-heart-fill"></span>
+						<span class="value" data-kudos-value="463" data-kudos-id="524189"></span>
+					</li>
+					<li data-tooltip="Views" data-tooltip-delay="500">
+						<span class="icon i-eye"></span>
+						<span class="value">70,713</span>
+					</li>
+				</ul>
+			</div>
+
+			<div class="user-info">
+	<div class="picture" style="background-image: url(https://lh5.googleusercontent.com/-vMMJXQia7VE/AAAAAAAAAAI/AAAAAAAAAGs/g0BP_WxkIR8/photo.jpg)"></div>
+	<div class="text">
+		<h3 class="title">
+			<a href="http://webdev.slides.com/coltsteele" class="username">Colt Steele</a>
+		</h3>
+		<p class="description"></p>
+		<ul class="links">
+			
+			
+		</ul>
+	</div>
+	<div class="clear"></div>
+</div>
+
+			<div class="clear"></div>
+		</div>
+	</header>
+
+	<section class="comments" id="comments">
+		<div id="disqus_thread"><iframe id="dsq-app3804" name="dsq-app3804" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" title="Disqus" width="100%" src="./Forms Exercise_files/saved_resource.html" style="width: 1px !important; min-width: 100% !important; border: none !important; overflow: hidden !important; height: 2068px !important;" horizontalscrolling="no" verticalscrolling="no"></iframe></div>
+	</section>
+
+	<section class="deck-list">
+		<h2>More from <a href="http://webdev.slides.com/coltsteele">Colt Steele</a></h2>
+		<ul class="carousel">
+			<li class="deck-thumbnail">
+  <a class="deck-link" href="http://webdev.slides.com/coltsteele/mysql-99-108-17"></a>
+  <img class="deck-image" src="./Forms Exercise_files/thumb.jpg" loading="lazy">
+  <footer class="deck-details">
+    <div class="top">
+      <div class="title">Stack Example</div>
+    </div>
+    <div class="bottom">
+      <a class="author" href="http://webdev.slides.com/coltsteele">
+        <span class="picture" style="background-image: url(https://lh5.googleusercontent.com/-vMMJXQia7VE/AAAAAAAAAAI/AAAAAAAAAGs/g0BP_WxkIR8/photo.jpg)"></span>
+        <span class="name">Colt Steele</span>
+      </a>
+      <div class="stats">
+        <div>6332<span class="icon i-eye"></span></div>
+      </div>
+    </div>
+  </footer>
+</li>
+<li class="deck-thumbnail">
+  <a class="deck-link" href="http://webdev.slides.com/coltsteele/mysql-107-16"></a>
+  <img class="deck-image" src="./Forms Exercise_files/thumb(1).jpg" loading="lazy">
+  <footer class="deck-details">
+    <div class="top">
+      <div class="title">Stack Youtube Video</div>
+    </div>
+    <div class="bottom">
+      <a class="author" href="http://webdev.slides.com/coltsteele">
+        <span class="picture" style="background-image: url(https://lh5.googleusercontent.com/-vMMJXQia7VE/AAAAAAAAAAI/AAAAAAAAAGs/g0BP_WxkIR8/photo.jpg)"></span>
+        <span class="name">Colt Steele</span>
+      </a>
+      <div class="stats">
+        <div>3117<span class="icon i-eye"></span></div>
+      </div>
+    </div>
+  </footer>
+</li>
+<li class="deck-thumbnail">
+  <a class="deck-link" href="http://webdev.slides.com/coltsteele/mysql-113"></a>
+  <img class="deck-image" src="./Forms Exercise_files/thumb(2).jpg" loading="lazy">
+  <footer class="deck-details">
+    <div class="top">
+      <div class="title">MySQL Triggers</div>
+    </div>
+    <div class="bottom">
+      <a class="author" href="http://webdev.slides.com/coltsteele">
+        <span class="picture" style="background-image: url(https://lh5.googleusercontent.com/-vMMJXQia7VE/AAAAAAAAAAI/AAAAAAAAAGs/g0BP_WxkIR8/photo.jpg)"></span>
+        <span class="name">Colt Steele</span>
+      </a>
+      <div class="stats">
+        <div>15.6k<span class="icon i-eye"></span></div>
+      </div>
+    </div>
+  </footer>
+</li>
+<li class="deck-thumbnail">
+  <a class="deck-link" href="http://webdev.slides.com/coltsteele/mysql-99-108-117"></a>
+  <img class="deck-image" src="./Forms Exercise_files/thumb(3).jpg" loading="lazy">
+  <footer class="deck-details">
+    <div class="top">
+      <div class="title">Advanced Developer Bootcamp Intro</div>
+    </div>
+    <div class="bottom">
+      <a class="author" href="http://webdev.slides.com/coltsteele">
+        <span class="picture" style="background-image: url(https://lh5.googleusercontent.com/-vMMJXQia7VE/AAAAAAAAAAI/AAAAAAAAAGs/g0BP_WxkIR8/photo.jpg)"></span>
+        <span class="name">Colt Steele</span>
+      </a>
+      <div class="stats">
+        <div>5371<span class="icon i-eye"></span></div>
+      </div>
+    </div>
+  </footer>
+</li>
+
+		</ul>
+	</section>
+
+</div>
+      </div>
+      <footer class="global-footer global-footer-minimal">
+  <div class="legal">
+    <a href="http://help.slides.com/">Help &amp; Support</a>
+    • <a href="http://webdev.slides.com/terms?root=true">Terms</a>
+    • <a href="http://webdev.slides.com/privacy?root=true">Privacy</a>
+    • <span class="copyright">© 2020 Slides, Inc.</span>
+   </div>
+</footer>
+
+    </div> <!--! end of #container -->
+    <script>
+UserVoice=window.UserVoice||[];(function(){var uv=document.createElement('script');uv.type='text/javascript';uv.async=true;uv.src='//widget.uservoice.com/f7sH7NavrjjvuGxByaw.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(uv,s)})();
+
+UserVoice.push(['set', {
+  accent_color: '#448dd6',
+  trigger_color: 'white',
+  trigger_background_color: 'rgba(46, 49, 51, 0.6)',
+  position: 'automatic'
+}]);
+
+</script>
+
+    
+<script>
+	var SLConfig = {"team":{"id":589,"name":"webdev","slug":"webdev","logo":null,"default_theme_id":1108,"user_count":3,"allow_scripts":false,"themes":[{"id":1499,"created_at":"2017-05-26T22:39:22.415Z","updated_at":"2017-05-26T22:39:27.302Z","name":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/20acd83a0560ae4d7fe14feb0e85e578/thumb.jpg?239650851","sanitize_messages":null,"slide_template_ids":[],"font_typekit":null,"font_google":null,"width":960,"height":700},{"id":1425,"created_at":"2017-02-12T00:35:36.603Z","updated_at":"2017-02-12T00:35:59.375Z","name":"printer friendly","thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/38dfc71f77199a02b2611936c44ac466/thumb.jpg","sanitize_messages":null,"slide_template_ids":[],"font_typekit":"","font_google":"","width":960,"height":700},{"id":1108,"created_at":"2016-05-15T05:15:50.631Z","updated_at":"2018-05-18T19:29:42.415Z","name":"MongoCourse","thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/5f1ddab96a533700b12ddc6ff09ec01c/thumb.jpg?1526671780","sanitize_messages":null,"slide_template_ids":[],"font_typekit":"","font_google":"","width":960,"height":700}],"beta_new_editor":true,"manually_upgraded":false,"allow_public_decks":true,"google_domain":""},"deck":{"id":524189,"slug":"forms-exercise-52","title":"Forms Exercise","description":"","width":960,"height":700,"margin":0.05,"visibility":"all","published_at":"2015-10-24T07:26:07.902Z","sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/secure/5fdf43/decks.jpg","view_count":70713,"user":{"id":122160,"username":"coltsteele","name":"Colt Steele","description":"","thumbnail_url":"https://lh5.googleusercontent.com/-vMMJXQia7VE/AAAAAAAAAAI/AAAAAAAAAGs/g0BP_WxkIR8/photo.jpg","paid":true,"pro":true,"lite":false,"team_id":589,"settings":{"id":145153,"present_controls":false,"present_upsizing":true,"present_pointer":false,"present_notes":true,"default_deck_tag_id":null},"enterprise":true,"membership":{"role":"owner","manager":true,"activated":true}},"background_transition":"slide","transition":"slide","theme_id":null,"theme_font":"montserrat","theme_color":"black-mint","auto_slide_interval":0,"comments_enabled":true,"forking_enabled":true,"rolling_links":false,"center":false,"shuffle":null,"should_loop":false,"share_notes":null,"slide_number":null,"slide_count":7,"rtl":false,"version":2,"collaborative":null,"deck_user_editor_limit":null,"data_updated_at":null,"font_typekit":null,"font_google":null,"time_limit":null,"navigation_mode":"default","upsizing_enabled":null},"user":{"id":122160,"username":"coltsteele","name":"Colt Steele","description":"","thumbnail_url":"https://lh5.googleusercontent.com/-vMMJXQia7VE/AAAAAAAAAAI/AAAAAAAAAGs/g0BP_WxkIR8/photo.jpg","paid":true,"pro":true,"lite":false,"team_id":589,"settings":{"id":145153,"present_controls":false,"present_upsizing":true,"present_pointer":false,"present_notes":true,"default_deck_tag_id":null},"enterprise":true,"membership":{"role":"owner","manager":true,"activated":true}}};
+</script>
+    <script src="./Forms Exercise_files/application-4452b7520e012fe6e873af685996f4b7bbb3cc73a02a90b6fe0690865d573020.js.download" defer="defer"></script>
+    	<script src="./Forms Exercise_files/deck-c4cb0951cb6bc8cf084f51238d3e813b6a4f462d772e095a33225ac815dec779.js.download" defer="defer"></script>
+	
+
+
+  
+
+<iframe style="display: none;" src="./Forms Exercise_files/saved_resource(1).html"></iframe></body></html>

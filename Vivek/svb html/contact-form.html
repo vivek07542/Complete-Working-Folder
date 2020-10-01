@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SVB/Contact-form</title>
+  <link rel="stylesheet" href="CSS/contact-form.css">
+  <link href="CSS/Noto-Sans.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/b17c0a1f3e.js" crossorigin="anonymous"></script>
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <header>
+     <picture>
+      <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="15" viewbox="0 0 1400 15" preserveAspectRatio="none">
+        <path fill="#7CC6B7" d="M0 0h261v8H0zm283 0h44v8h-44zm91 0h29v8h-29z"/>
+        <path fill="#EAF5F1" d="M412 0h39v8h-39z"/>
+        <path fill="#7CC6B7" d="M451 0h26v8h-26z"/>
+        <path fill="#EAF5F1" d="M477 0h467v8H477z"/>
+        <path fill="#7CC6B7" d="M944 0h5v8h-5z"/>
+        <path fill="#EAF5F1" d="M949 0h39v8h-39z"/>
+        <path fill="#7CC6B7" d="M988 0h38v8h-38zm85 0h45v8h-45zm50 0h51v8h-51zm61 0h80v8h-80z"/>
+        <path fill="#006F40" d="M1118 0h5v8h-5z"/>
+        <path fill="#7CC6B7" d="M1285 0h115v8h-115z"/>
+        <path fill="#006F40" d="M279 0h5v8h-5z"/>
+        <path fill="#FFFFFF" d="M1174 0h10v8h-10z"/>
+        <path fill="#EAF5F1" d="M240 0h39v8h-39zm928 0h21v8h-21z"/>
+      </svg>
+    </picture> 
+        <div class="box_title">
+        <div class="left_Logo">
+          <img src="Image/logo.png">
+        </div>
+        <div class="right_Login">
+          <div class="men_Login">
+            <i class='fas fa-user' style='font-size:24px;color:white'></i>
+          </div>
+          <div class="button_Login">
+            <span>login</span>
+          </div>
+        </div>
+    </div>
+    <div class="nav_Bar">      
+      <div class="icon_Menu">      
+        <button onclick="myFunction()" class="dropbtn">
+          <div class="line_Menu">
+            <span><i class="fas fa-bars"></i></span>
+          </div>
+          <div class="font_Menu">
+            <p>Menu</p>
+          </div>
+        </button>               
+          <ul class="menu">
+            <li class="menu-item"><a href="#SVB" style="color:#007a62;font-size: 25px;"><u>SVB</u></a></li>
+            <li class="menu-item"><a href="#Social" style="background-color: whitesmoke;"><u>Social Insurance Bank</u></a></li>
+            <li class="menu-item"><a href="#">AOW Pension</a>
+              <ul>
+                  <li class="menu-item"><a href="#" style="color:#007a62;font-size: 25px;">AOW Pension</a><li>
+                  <li class="menu-item"><a href="#"><u>AOW Home</u></a></li>
+                  <li class="menu-item"><a href="#">What is AOW Pension</a></li>
+                  <li class="menu-item"><a href="#">Stage Pension Age</a></li>
+                  <li class="menu-item"><a href="#">How much AOW and other pension</a></li>
+                  <li class="menu-item"><a href="#">AOW Amount</a></li>
+                  <li class="menu-item"><a href="#"><u>Payment of AOW pension</u></a></li>
+                  <li class="menu-item"><a href="#">Live alone or 1 or more other</a></li>
+                  <li class="menu-item"><a href="#"><u>When does your AOW pension Change</u></a></li>
+                  <li class="menu-item"><a href="#">AOW outside Netherland</a></li>
+                  <li class="menu-item"><a href="#">Someone died</a></li>
+                  <li class="menu-item"><a href="#">Organsie your Buisness online</a></li>
+                  <li class="menu-item"><a href="#">Right And Obligation</a></li>            
+                </ul>
+            </li>
+            <li class="menu-item"><a href="#">Child Benefit</a>
+              <ul>
+                <li class="menu-item"><a href="#" style="color:#007a62;font-size: 25px;">Child Benefits</a></li>
+                <li class="menu-item"><a href="#">Child Benefit Home</a></li>
+                <li class="menu-item"><a href="#">What is Child Benefit</a></li>  
+                <li class="menu-item"><a href="#">Child Benefit for your child</a></li>
+                <li class="menu-item"><a href="#">Double Child Benefit</a></li>
+                <li class="menu-item"><a href="#">Amount and Payment Days</a></li>
+                <li class="menu-item"><a href="#">How to apply for Child Benefit</a></li>    
+                <li class="menu-item"><a href="#">Your child is 16 or older</a></li>
+                <li class="menu-item"><a href="#">additional Payment for your child</a></li>  
+                <li class="menu-item"><a href="#"><u>Changes in your family</u></a></li>
+                <li class="menu-item"><a href="#"><u>When does Child Benefit stop</u></a></li>
+                <li class="menu-item"><a href="#">Child Benefit outside Netherland</a></li>
+                <li class="menu-item"><a href="#">Organsie your Buisness online</a></li>
+                <li class="menu-item"><a href="#">Right And Obligation</a></li>    
+              </ul> 
+            </li>
+            <li class="menu-item"><a href="#">Personal Budget</a></li>
+            <li class="menu-item"><a href="#">Anw</a></li>
+            <li class="menu-item"><a href="#">AIO Supplement</a></li>
+            <li class="menu-item"><a href="#">International Posting</a></li>
+            <li class="menu-item"><a href="#">Long Term Care Act</a></li>
+            <li class="menu-item"><a href="#">Bridging Benefit AOW</a></li>
+            <li class="menu-item"><a href="#">Childcare Allowance</a></li>
+            <li class="menu-item"><a href="#">Voluntary Insurance</a></li>
+            <li class="menu-item"><a href="#">Remigration Benefit</a></li>
+            <li class="menu-item"><a href="#">Member of resitanca and victim of war</a></li>
+            <li class="menu-item"><a href="#">BBZ and BDZ></li>
+            <li class="menu-item"><a href="#">Asbestos Scheme</a></li>
+            <li class="menu-item"><a href="#">CSE Scheme</a></li>
+            <li class="menu-item"><a href="#">Objective Scheme</a></li>
+            <li class="menu-item"><a href="#">About of SVB</a></li>
+            <li class="menu-item"><a href="#">Explanation My SVB</a></li>
+          </ul>
+        </div> 
+        <div class="search_Bar">
+        <input type="text" placeholder="search by keyword,question or subject...">
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </div>
+      <div class="language_Bar">
+        <button onclick="myFunction()" class="dropbtn2">  
+          <div class="menu_Flag">
+            <img src="Image/netherlandflag.png">
+          </div>
+          <div class="country">
+            <p>Netherlands &ensp;<i class="fa fa-caret-down"></i></p>
+          </div>
+        </button>
+       <ul class="menu"> 
+        <li class="menu-item"><a href="#" style="color:black;font-size: 25px;"></a>English</li>
+        <li class="menu-item"><a href="#">French</a></li>
+        <li class="menu-item"><a href="#">Germany</a></li>
+        <li class="menu-item"><a href="#">Espansol</a></li>
+        <li class="menu-item"><a href="#">Dutch</a></li>
+      </ul>
+      </div>
+    </div> 
+    </div>
+  </header> 
+  <div class="main_Content">
+    <div class="crush_Head">
+      <ul>
+        <li><a href="#"><u>SVB Homes</u></a></li>
+        <li><a href="#"><i style="color:#007a62";><b>&gt;</b></i>&ensp;&ensp;<u>General Home</u></a></li>
+      </ul>
+    </div>
+    <div class="read_Container">
+      <div class="read_Head">
+        <button>Read</button>
+        <h1>Contact Form</h1>
+      </div>
+      <div class="read_Content">
+        <button>Read</button>
+        <p>We will answer your questions or call you back during working days.</p><br>
+        <p>Do you have a question about the reimbursement of personal contribution for childcare? Then take a look at <span><u>svb.nl/opvang</u></span>.</p>
+        <p>Our apologies. The data does not seem to load or is loading very slowly.<br><br>
+
+          <b>Please try to refresh the page</b><br><br>
+          
+          The problem remains? Please come back later.</p><br><br>
+      </div>
+    </div>    
+    <div class="ques_Container">
+        <h2>your question</h2>
+        <h3>Fill in all questions, they are mandatory!</h3><br>
+        <h3>Which scheme do you have a question about?</h3><br>
+        <select class="select_Menu">
+          <option>AOW</option>
+          <option>Kinderbijslag</option>
+          <option>Persoonsgebonden Budget(PGB)</option>
+          <option>AIO-Aanuilling</option>
+          <option>Anw</option>
+          <option>Asbestregeling</option>
+          <option>Bureau voor belgische zaken(BBZ)</option>
+          <option>Bureau voor Duitse zaken(BDZ) </option>
+          <option>CSE-regeling</option>
+          <option>Gemoedsbezwaren</option>
+          <option>Internationale detachering</option>
+          <option>Kinderbijslag bij intensieve zorg</option>
+          <option>Overbruggingsuitkering(OBR)</option>
+          <option>Remigratie-uitkering</option>
+          <option>Verzetsdeelnemers en Oorlogsgetroffenen(V&O)</option>
+          <option>Vrijwillige verzekering</option>
+          <option>Wet langdurige zorg(WLZ)</option>
+        </select>
+          
+        <h3>How can we contact you?</h3>
+        <p>Is your question about your personal situation? Then you will always receive an answer by phone. We always call with an anonymous phone number.</p><br>
+        <input type="radio" name="rl" ><span class="radio_Span">via Email</span><br><br>
+        <input type="radio" name="rl" ><span class="radio_Span">by phone</span><br><br>
+        <input type="radio" name="rl" ><span class="radio_Span">no preference</span><br><br>
+    </div> 
+    <div class="radio_Content">   
+      <h3>your question</h3>
+      <textarea></textarea>
+      <h3>Your Date</h3>
+      <h3>Name</h3>
+      <input type="text" class="text_ques">
+      <h3>E-mail Address</h3>
+      <input type="text" class="text_ques">
+    </div>  
+    <div class="send_Container">
+      <button>
+        Send
+      </button>
+    </div>
+  </div>     
+  <div class="info_Container">
+        <div class="more_Info">
+          <h3>more information</h3>
+          <a href="#"><i style="color:#007a62";><b>&gt;</b></i>&ensp;&ensp;About Our website</a>   
+        </div>
+        <div class="share_info">
+          <h3>Share this page</h3>
+          <div class="social_info">
+            <ul>
+              <li>
+                <a class="fa fa-facebook"  href="https://nl-nl.facebook.com/socialeverzekeringsbank/" title="You are going to an external site. "></a>
+                <span class="span_Text"><a href="https://nl-nl.facebook.com/socialeverzekeringsbank/" title="You are going to an external site. ">Facebook</a></span>
+                
+              </li>
+              <li>
+                <a class="fa fa-linkedin" href="https://www.linkedin.com/company/sociale-verzekeringsbank" title="You are going to an external site.  This opens in a new window"></a> 
+                <span class="span_Text"><a href="https://www.linkedin.com/company/sociale-verzekeringsbank" title="You are going to an external site.  This opens in a new window">Linkedin</a></span>
+              </li>
+              <li>
+                <a class="fa fa-twitter" href="https://twitter.com/SVBonline" title="You are going to an external site.  This opens in a new window"></a> 
+                <span class="span_Text"><a href="https://twitter.com/SVBonline" title="You are going to an external site.  This opens in a new window">Twitter</a></span>
+              </li>
+            </ul>
+          </div>
+        </div>
+  </div>         
+  
+  <footer> 
+    <div class="social_media">
+      <div class="social_Sites">
+        <h4>follow us</h4>
+        <ul>
+          <li>
+            <a class="fa fa-facebook"  href="https://nl-nl.facebook.com/socialeverzekeringsbank/" title="You are going to an external site. "></a>
+            <span class="span_Text"><a href="https://nl-nl.facebook.com/socialeverzekeringsbank/" title="You are going to an external site. ">Facebook</a></span>
+            
+          </li>
+          <li>
+            <a class="fa fa-linkedin" href="https://www.linkedin.com/company/sociale-verzekeringsbank" title="You are going to an external site.  This opens in a new window"></a> 
+            <span class="span_Text"><a href="https://www.linkedin.com/company/sociale-verzekeringsbank" title="You are going to an external site.  This opens in a new window">Linkedin</a></span>
+          </li>
+          <li>
+            <a class="fa fa-twitter" href="https://twitter.com/SVBonline" title="You are going to an external site.  This opens in a new window"></a> 
+            <span class="span_Text"><a href="https://twitter.com/SVBonline" title="You are going to an external site.  This opens in a new window">Twitter</a></span>
+          </li>
+        </ul>  
+      </div>
+      <div class="social_Service">
+        <h4>Service</h4>
+        <ul>
+          <li>                      
+            <a href="#"><i style="color:#007a62";><b>&gt;</b></i>&ensp;&ensp;Contact</a>
+          </li>
+          <li>                      
+            <a href="#"><i style="color:#007a62";><b>&gt;</b></i>&ensp;&ensp;Help</a>
+          </li>
+          <li>                      
+            <a href="#"><i style="color:#007a62";><b>&gt;</b></i>&ensp;&ensp;For Buisness</a>
+          </li>
+        </ul>
+      </div>
+      <div class="social_Bank">
+        <div class="bank_Head"><h4>The Social Insurance Bank</h4></div>
+        <div class="bank_List"><ul>
+          <li>                      
+            <a href="#"><i style="color:#007a62";><b>&gt;</b></i>&ensp;&ensp;SVB Homes</a>
+          </li>
+          <li>                      
+            <a href="#"><i style="color:#007a62";><b>&gt;</b></i>&ensp;&ensp;work at</a>
+          </li>
+          <li>                      
+            <a href="#"><i style="color:#007a62";><b>&gt;</b></i>&ensp;&ensp;Press</a>
+          </li>
+          <li>                      
+            <a href="#"><i style="color:#007a62";><b>&gt;</b></i>&ensp;&ensp;About the SVB</a>
+          </li>
+          <li>                      
+            <a href="#"><i style="color:#007a62";><b>&gt;</b></i>&ensp;&ensp;Service gurantee</a>
+          </li>
+          <li>                      
+            <a href="#"><i style="color:#007a62";><b>&gt;</b></i>&ensp;&ensp;Privacy</a>
+          </li>
+        </ul>
+      </div>  
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="about_Title">
+        <a href="#">About Our Website</a>
+      </div>
+      <div class="word_Title">
+        <span>The SVB, the provider of national insurance in the Netherlands</span>
+      </div>
+    </div> 
+    <picture>
+      <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="15" viewbox="0 0 1400 15" preserveAspectRatio="none">
+        <path fill="#7CC6B7" d="M0 0h261v8H0zm283 0h44v8h-44zm91 0h29v8h-29z"/>
+        <path fill="#EAF5F1" d="M412 0h39v8h-39z"/>
+        <path fill="#7CC6B7" d="M451 0h26v8h-26z"/>
+        <path fill="#EAF5F1" d="M477 0h467v8H477z"/>
+        <path fill="#7CC6B7" d="M944 0h5v8h-5z"/>
+        <path fill="#EAF5F1" d="M949 0h39v8h-39z"/>
+        <path fill="#7CC6B7" d="M988 0h38v8h-38zm85 0h45v8h-45zm50 0h51v8h-51zm61 0h80v8h-80z"/>
+        <path fill="#006F40" d="M1118 0h5v8h-5z"/>
+        <path fill="#7CC6B7" d="M1285 0h115v8h-115z"/>
+        <path fill="#006F40" d="M279 0h5v8h-5z"/>
+        <path fill="#FFFFFF" d="M1174 0h10v8h-10z"/>
+        <path fill="#EAF5F1" d="M240 0h39v8h-39zm928 0h21v8h-21z"/>
+      </svg>
+    </picture>   
+  </footer>       
+</body>
+</html>

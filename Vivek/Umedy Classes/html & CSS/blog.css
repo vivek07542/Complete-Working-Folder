@@ -1,0 +1,25 @@
+
+.post{
+  max-width:700px;
+  width:80%;
+  margin:20px auto;
+  border:20px solid rgb(180, 187, 192);
+  padding:30px;
+}
+h2{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 800;
+}
+p{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+}
+.date{
+  color:steelblue;
+  font-family: 'Source Sans Pro', sans-serif;
+  letter-spacing: 2px;
+  }
+  .quote{
+    border-left:3px solid  rgb(180, 187, 192);
+    padding: 10px;
+  }

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>School-Application Form</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/form.css">
+</head>
+<body>
+<div class="container px-5">
+  <h1>School Admission Form</h1>
+  <h4>Student Detail</h4>
+  <form class="needs-validation" novalidate>
+    <!-- User Name - Input Tag  -->
+    <div class="form-row">
+      <div class="col-md-4 mb-3">
+        <label for="validationCustom01">First name</label>
+        <input type="text" class="form-control" id="userFirstName" oninput="validate(this)" placeholder="First name" required>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <label for="validationCustom02">Last name</label>
+        <input type="text" class="form-control" id="userLastName" oninput="validate(this)" placeholder="Last name" required>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+    </div>
+    <!-- User Gender -Radio Button -->
+    <div class="form-row">
+      <div class="col-md-2">
+        <label for="validationCustom07">Male</label>
+        <input type="radio" class="form-control" id="rdbMaleGender" name="radio-stacked" value="Male" required>
+        <div class="invalid-feedback">
+          Please Select Gender.
+        </div>
+      </div>
+      <div class="col-md-2">
+        <label for="validationCustom08">Female</label>
+        <input type="radio" class="form-control" id="rdbFemaleGender" name="radio-stacked" value="Female" required>
+        <div class="invalid-feedback">
+          Please Select Gender
+        </div>
+      </div>
+    </div>
+    <!-- User Address - Textarea -->
+    <div class="form-row">
+      <div class="col-md-6 mb-3">
+        <label for="validationCustom06">Address</label>
+        <textarea type="text" class="form-control" id="txtUserAddress" oninput="validate(this)" placeholder="Address" required></textarea>
+        <div class="invalid-feedback">
+          Please provide a valid Address.
+        </div>
+      </div>
+    </div>  
+    <!-- User Country, State & City - Select -->
+    <div class="form-row">
+      <div class="col-md-4 mb-3">
+        <label for="validationCustom05">Country</label>
+        <select class="custom-select form-control" id="countySel" placeholder="Country" required>
+          <option value="" selected="selected">Country</option>
+        </select>
+        <div class="invalid-feedback">
+          Please select a valid Country.
+        </div>
+      </div>
+      <div class="col-md-3 mb-3">
+        <label for="validationCustom04">State</label>
+        <select class="custom-select form-control" id="stateSel" placeholder="State" required>
+          <option value="" selected="selected">State</option>
+        </select>
+        <div class="invalid-feedback">
+          Please select a valid State.
+        </div>
+      </div>
+      <div class="col-md-3 mb-3">
+        <label for="validationCustom03">City</label>
+        <select class="custom-select form-control" id="citySel" placeholder="City" required>
+          <option value="" selected="selected">City</option>
+        </select>
+        <div class="invalid-feedback">
+          Please select a valid City.
+        </div>
+      </div>
+    </div>
+    <!-- Mobile & Email Id -->
+    <div class="form-row">
+      <div class="col-md-4 mb-3">
+        <label for="validationCustom09">Mobile Number</label>
+        <input type="number" class="form-control" id="txtUserMobileNo" oninput="validate(this)" placeholder="Mobile Number" required>
+        <div class="invalid-feedback">
+          Please enter Valid Number
+        </div>
+      </div>
+      <div class="col-md-5 mb-3">
+        <label for="validationCustom10">Email Address</label>
+        <input type="text" class="form-control" id="txtUserEmail" oninput="validate(this)" placeholder="Email id" required>
+        <div class="invalid-feedback">
+          Please enter Valid Email id
+        </div>
+      </div>
+    </div>
+    <!-- Check Box for User -->
+    <div class="form-group">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value=" " id="chkFormData">
+        <label class="form-check-label" for="invalidCheck">
+          Agree to terms and conditions
+        </label>
+        <div class="invalid-feedback">
+          You must agree before submitting.
+        </div>
+      </div>
+    </div>
+    <!-- Submit Button -->
+    <input class="btn btn-primary" id="btnSubmit" type="submit">Save form</input>
+  </form>
+</div>
+<!-- Dynamic Section  -->
+<div class="container px-5 my-3">
+  <h4>Submited Student Detail</h4>
+  <!-- Dynamically Created Table Inside it. -->
+  <table id="tblData">
+    <!-- Dynamically Created Row & Column Using JS -->
+  </table>
+</div>
+  <!-- JQuery Bootstrap -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>  
+
+  <!-- My File JS -->
+  <script src="js/form.js"></script>
+</body>
+
+</html>

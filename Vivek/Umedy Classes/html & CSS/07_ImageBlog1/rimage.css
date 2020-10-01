@@ -1,0 +1,15 @@
+img{
+  width:30%;
+  float:left;
+  margin:1.66%;
+}
+ p{
+border-bottom:2px solid gray;
+text-transform: uppercase;
+font-size: 30px;
+font-weight: 900;
+margin-left:1.66%;
+padding-bottom:25px;
+width:30%;
+font-family:"arial"sans-serif;
+}

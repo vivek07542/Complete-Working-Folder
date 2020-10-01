@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CSS File -->
+  <link rel="stylesheet" href="css/app.css">
+  <!-- Bootstrap File -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <title>ColorGame</title>
+</head>
+<body>
+<header>
+  <div class="fluid-container firstHead">
+    <p class="lead">THE GREAT</p>
+    <h1 class="display-4" id="colorDisplay">RGB</h1>
+    <p class="lead">GUESSING GAME</p>    
+  </div>
+  <div class="row secondHead">
+    <div class="col-4 col-md-4 text-right">
+      <button type="button" class="btn btn-outline-primary btn-sm border-0 rounded-0 playKey" id="reset">New Game</button>
+    </div>
+    <div class="col-2 col-md-4 text-center">
+      <span id="message">Correct...!!</span>
+    </div>
+    <div class="col-6 col-md-4 text-center text-md-left">
+      <button type="button" class="btn btn-outline-primary btn-sm border-0 rounded-0 playKey" id="easyDisplay">Easy Game</button>
+      <button type="button" class="btn btn-outline-primary btn-sm border-0 rounded-0 playKey selected" id="hardDisplay">Hard Game</button>
+    </div>    
+  </div>
+</header>
+<div class="body-content">
+  <div class="row mx-auto justify-content-center main_box">
+    <div class=" col-3 box"></div>
+    <div class=" col-3 box"></div>
+    <div class=" col-3 box"></div>
+  </div>
+  <div class="row mx-auto justify-content-center main_box">
+    <div class=" col-3 box"></div>
+    <div class=" col-3 box"></div>
+    <div class=" col-3 box"></div>
+  </div>
+</div>  
+  <!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>  
+<script src="js/app.js"></script>  
+</body>
+</html> 
