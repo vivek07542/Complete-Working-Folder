@@ -1,0 +1,65 @@
+body{
+  font-family: 'Baskervville', serif;
+}
+.navbar{
+  /* border:1px solid purple; */
+  padding-top:-25px;
+}
+.container{
+  /* border:1px solid red; */
+  font-size: 12px;
+  /* padding-right:0px;   */
+  /* height:25px; */
+  /* position:relative; */
+}
+.list-group{
+  list-style: none;
+  max-height: 18px;
+  /* border:1px solid green;   */
+  /* position:absolute; */
+}
+.list-group .nav-link{
+  height:12px;
+  text-align: right;
+  color: #0000a4;
+  /* border:1px solid red; */
+  margin-top:-15px;  
+}
+.navbar-nav .nav-link{
+  color:#01982b;
+}
+.navbar .container .navbar-brand{
+  font-weight: 900;
+  color:white;
+  font-size: 30px;
+  /* border:1px solid green; */
+}
+.navbar .container .form-inline{
+  margin:0 auto;
+}
+.navbar .container .form-inline .form-control{
+  width:518px;
+  height:42px;
+  margin-left:140px;
+  border-radius:20px;
+  border:1px solid white;  
+  
+}
+.navbar .container .form-inline .btn{
+  margin-left: -50px;
+  background-color: white;
+  color: #0000a4;
+}
+.navbar .container .nav {
+  border:1px solid red;
+  margin-left:170px;
+}
+.navbar .container .nav li{
+  padding-left:10px;
+
+}
+.navbar .container .nav li a{
+  color:white;
+  font-size: 12px;
+  text-decoration: none;
+}

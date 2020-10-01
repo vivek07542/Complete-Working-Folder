@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="app/app.css">
+
+</head>
+<body>
+<div class="container">
+  <form name="forms">
+    <input type="text" name="answer" class="displayScreen"><br>
+    <input type="button" value=" 1 " onclick="forms.answer.value += '1'" class="numberBtn">
+    <input type="button" value=" 2 " onclick="forms.answer.value += '2'" class="numberBtn">
+    <input type="button" value=" 3 " onclick="forms.answer.value += '3'" class="numberBtn">
+    <input type="button" value=" + " onclick="forms.answer.value += '+'" class="sumBtn"><br>
+
+    <input type="button" value=" 4 " onclick="forms.answer.value += '4'" class="numberBtn">
+    <input type="button" value=" 5 " onclick="forms.answer.value += '5'" class="numberBtn">
+    <input type="button" value=" 6 " onclick="forms.answer.value += '6'" class="numberBtn">
+    <input type="button" value=" - " onclick="forms.answer.value += '-'" class="subBtn"><br>
+
+    <input type="button" value=" 7 " onclick="forms.answer.value += '7'" class="numberBtn">
+    <input type="button" value=" 8 " onclick="forms.answer.value += '8'" class="numberBtn">
+    <input type="button" value=" 9" onclick="forms.answer.value += '9'" class="numberBtn">
+    <input type="button" value=" * " onclick="forms.answer.value += '*'" class="multiBtn"><br>
+
+    <input type="button" value=" C " onclick="forms.answer.value = ''" class="resetBtn">
+    <input type="button" value=" 0 " onclick="forms.answer.value += '0'" class="numberBtn">
+    <input type="button" value=" ÷ " onclick="forms.answer.value += '/'" class="divideBtn">
+    <input type="button" value=" = " onclick="forms.answer.value = eval(forms.answer.value)" class="resultBtn"><br>
+  </form>
+</div><br>  
+<script src="js/app.js"></script> 
+</body>
+</html>

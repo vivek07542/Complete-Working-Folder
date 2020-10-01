@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Budget</title>
+  <link rel="stylesheet" href="css/budget.css">  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <div class="container">
+    <h5>Budget APP</h5>
+    <div class="budget-section">
+      <div class="box1">
+          <p>Please Enter Your Budget</p>
+          <input type="text" id="inputBudget"><br><br>
+          <button id="btnBudget">Calculate</button>
+      </div>
+      <div class="box2">        
+        <p>BUDGET</p>
+        <a><i class="fa fa-money " style="font-size: 45px;color: #03668d;" aria-hidden="true"></i></a>
+        <p>$ <span id="displayBudget"></span></p>
+      </div>
+      <div class="box3">        
+        <p>EXPENDITURE</p>
+        <a><i class="fa fa-credit-card" style="font-size: 45px;color: #03668d;" aria-hidden="true"></i></a>
+        <p>$ <span id="displayExpense"></span></p>
+      </div>
+      <div class="box4">        
+        <p>BALANCE</p>
+        <a><i class="fa fa-usd" style="font-size: 45px;color: #03668d;" aria-hidden="true"></i></a>
+        <p>$ <span id="displayBalance"></span></p>
+      </div>
+    </div>
+    <div class="expenditure-section">
+      <div class="block-1">
+          <p>Please Enter Your Expense</p>
+          <input type="text" id="txtExpense">
+          <p>Please Enter Your Expense Amount</p>
+          <input type="text" id="amtExpense"><br><br>
+          <button id="btnExpense">Add Expense</button>
+      </div>
+      <div class="block-2">
+        <table class="table" id="tblData">
+          <tbody>
+            <tr>
+              <td>Expense Title</td>
+              <td>Expense Amount</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <script src="js/budget.js"></script>
+</body>
+</html>
