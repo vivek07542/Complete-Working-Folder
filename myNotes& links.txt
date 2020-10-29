@@ -1,0 +1,2 @@
+1) To remove Element through any Div, Tr and Ul , Completely- https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_node_removechild_while
+2) https://www.freecodecamp.org/news/javascript-array-of-objects-tutorial-how-to-create-update-and-loop-through-objects-using-js-array-methods/

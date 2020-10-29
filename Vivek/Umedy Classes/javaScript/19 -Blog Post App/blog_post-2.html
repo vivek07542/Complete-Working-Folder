@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog-Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="collapse navbar-collapse container" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">Posts <span class="sr-only">(current)</span></a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" id="dropdownUserProfile">Pending Approvals</a>
+                        <a class="dropdown-item" id="">All Posts</a>
+                        <a class="dropdown-item" id="">Promotional Posts</a>
+                    </div>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <div class="collapse navbar-collapse mr-5" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <span id="userFullName"></span>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" id="dropdownUserProfile" onclick="dropdownProfile()">Profile</a>
+                                <a class="dropdown-item" id="dropdownUserSignOut">SignOut</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </form>
+        </div>
+    </nav>
+    <div class="row" id="verticalTab">
+        <div class="col-2 form-control" id="leftSideDiv">
+            <div class="list-group" id="list-tab" role="tablist">
+                <a class="list-group-item list-group-item-action form-control active" id="myProfileTab" data-toggle="list"
+                    href="#list-home" role="tab" onclick="editValueToProfile()">My Profile</a>
+                <a class="list-group-item list-group-item-action form-control" id="userForAdminTab" onclick="userTableGenerate()" data-toggle="list"
+                    href="#list-profile" role="tab">Users</a>
+            </div>
+        </div>
+        <div class="col-10">
+            <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+                 <div class="jumbotron text-center my-5" id="myprofileDiv">
+                    <div class="form-group row justify-content-across">
+                        <label class="col-sm-2">UserName:</label>
+                        <div class="col-sm-4">
+                          <p class="UserInfoFromLocalStorage"></p>
+                        </div>
+                        <label class="col-sm-2">Password:</label>
+                        <div class="col-sm-4">
+                          <p class="UserInfoFromLocalStorage"></p>
+                        </div>
+                        <label class="col-sm-2">Role:</label>
+                        <div class="col-sm-4">
+                          <p class="UserInfoFromLocalStorage"></p>
+                        </div>                        
+                        <label class="col-sm-2">First Name:</label>
+                        <div class="col-sm-4">
+                          <p class="UserInfoFromLocalStorage"></p>
+                        </div>
+                        <label class="col-sm-2">Last Name:</label>
+                        <div class="col-sm-4">
+                          <p class="UserInfoFromLocalStorage"></p>
+                        </div>
+                        <label class="col-sm-2">Mobile No.:</label>
+                        <div class="col-sm-4">
+                          <p class="UserInfoFromLocalStorage"></p>
+                        </div>
+                    </div>
+                   <button class="btn btn-primary" id="editProfileBtn">Edit</button>
+                 </div>   
+                </div>
+                <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
+                    <div class="jumbotron text-center my-5" id="myprofileDiv">
+                        <div>
+                            <button class="btn btn-primary my-4 float-right">Create User</button>
+                        </div>
+                        <div id="tableBox"> 
+                            <h3 class="display-7">Users Detail</h3>                           
+                            <table class="table table-striped" id="tblData"></table>
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/app1.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

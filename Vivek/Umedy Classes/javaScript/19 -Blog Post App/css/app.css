@@ -1,0 +1,28 @@
+body{
+    margin:0;
+    padding:0;
+    background-color: orange;
+}   
+.jumbotron{
+    background-color: #f5f5f5; 
+    width:90%;   
+    margin:0 auto;
+}
+.validateRedBorder{
+    border:1px solid red;
+}
+.validateGreenBorder{
+    border:1px solid green;
+}
+.textIfFail{
+    display:none;
+}
+#verticalTab{
+    height:535px;  
+    display:none; 
+}
+#leftSideDiv{
+    background-color: white;   
+    padding-left: 30px;
+}
+

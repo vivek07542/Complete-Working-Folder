@@ -1,0 +1,26 @@
+body{
+    background-color:rgb(249,216,227);
+    text-align: center;
+}
+/* div{
+    display:inline-block;
+    padding-top:30px;
+} */
+button{
+    display:inline-block;
+    padding:10px;
+    margin-bottom: 30px;
+}
+
+#table{
+    display:block;
+    margin-top:20px;
+    /* border: 1px solid black; */
+}
+thead{
+    border: 1px solid black;
+}
+th,td{
+    border:1px solid black;
+    padding:5px;
+}

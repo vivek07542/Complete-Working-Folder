@@ -13,7 +13,13 @@ var pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
 var chkFormData = document.getElementById("chkFormData");
 var tblData = document.getElementById("tblData");
 var markContainer = document.getElementById("markContainer");
-
+var displayDynamic = document.getElementById("displayDynamic");
+var displayMainDiv = document.getElementById("displayMainDiv");
+var submitButton = document.getElementById("submitButton");
+var displaySubject = document.getElementById("displaySubject");
+var displaySubjectMarks = document.getElementById("displaySubjectMarks");
+var displayUserSemester = document.getElementById("displayUserSemester");
+var studentMarkDetail = document.getElementById("studentMarkDetail");
 // Select Function
 var countryStateInfo = {
   "USA": {
@@ -99,15 +105,15 @@ btnSubmit.addEventListener("click", function () {
       break;
     }
   }
-  if(validateItem()){
-    if (isCreatedTr){
-      dynamicElementFormation();     
+  if (validateItem()) {
+    if (isCreatedTr) {
+      dynamicElementFormation();
     }
-    else{
-      oldPositionPlacing(selectedTr);      
+    else {
+      oldPositionPlacing(selectedTr);
     }
     resetValue();
-  };  
+  };
 });
 // validation Function
 function validateItem() {
@@ -257,7 +263,7 @@ function validateItem() {
 
   if (chkFormData.checked === false) {
     chkFormData.classList.remove("displayBoxCorrect");
-    chkFormData.classList.add("displayBoxWrong");    
+    chkFormData.classList.add("displayBoxWrong");
     let errorDiv = chkFormData.nextElementSibling;
     errorDiv.classList.remove("invalidDisplay");
     errorDiv.classList.add("displayIfWrong");
@@ -277,6 +283,9 @@ function dynamicElementFormation() {
   // console.log("Save Button Activated");
   let tblTr = document.createElement("tr");
   tblTr.className = "tblTr";
+  let tblTdUniqueId = document.createElement("td");
+  tblTdUniqueId.innerHTML = "<p></p>";
+  tblTdUniqueId.classList.add("counter");
   let tblTdUserName = document.createElement("td");
   tblTdUserName.innerHTML = userFirstName.value + " " + userLastName.value;
   // let tblTdLastName = document.createElement("td");
@@ -305,26 +314,26 @@ function dynamicElementFormation() {
     let parentTr = tblTdEdit.parentNode;
     parentTr.style.backgroundColor = "pink";
     // Name Edit
-    userFirstName.value = parentTr.children[0].innerText.split(" ")[0];
-    userLastName.value = parentTr.children[0].innerText.split(" ")[1];
+    userFirstName.value = parentTr.children[1].innerText.split(" ")[0];
+    userLastName.value = parentTr.children[1].innerText.split(" ")[1];
     // Gender Edit
-    if (rdbFemaleGender.value === parentTr.children[1].innerText) {
+    if (rdbFemaleGender.value === parentTr.children[2].innerText) {
       rdbFemaleGender.checked = true;
     } else {
       rdbMaleGender.checked = true;
     };
     // Address Edit        
-    txtUserAddress.value = parentTr.children[2].innerText;
+    txtUserAddress.value = parentTr.children[3].innerText;
     // Country Edit
-    countySel.value = parentTr.children[3].innerText;
+    countySel.value = parentTr.children[4].innerText;
     // State Edit 
-    stateSel.value = parentTr.children[4].innerText;
+    stateSel.value = parentTr.children[5].innerText;
     // City Sel 
-    citySel.value = parentTr.children[5].innerText;
+    citySel.value = parentTr.children[6].innerText;
     // Mobile Edit
-    txtUserMobileNo.value = parentTr.children[6].innerText;
+    txtUserMobileNo.value = parentTr.children[7].innerText;
     // Email Edit
-    txtUserEmail.value = parentTr.children[7].innerText;
+    txtUserEmail.value = parentTr.children[8].innerText;
 
     // parentTr.parentNode.removeChild(parentTr);
   });
@@ -337,10 +346,13 @@ function dynamicElementFormation() {
     }
   });
   let tblTdMarkup = document.createElement("td");
-  tblTdMarkup.innerHTML = " Mark ";
-  tblTdMarkup.addEventListener("click",function(){
-    popUp();
+  tblTdMarkup.innerHTML = " Add Mark ";
+  tblTdMarkup.addEventListener("click", function () {
+    markContainer.style.display = "flex";
+    popUp(tblTdMarkup);
   });
+
+  tblTr.appendChild(tblTdUniqueId);
   tblTr.appendChild(tblTdUserName);
   tblTr.appendChild(tblTdRdbGender);
   tblTr.appendChild(tblTdAddress);
@@ -355,25 +367,24 @@ function dynamicElementFormation() {
   tblData.appendChild(tblTr);
 }
 // Extracting & Placing Value to Old Place
-function oldPositionPlacing(selectedTr){
-
+function oldPositionPlacing(selectedTr) {
   let selectedTds = selectedTr.getElementsByTagName("td");
-  selectedTds[0].innerHTML = userFirstName.value + " " + userLastName.value;
+  selectedTds[1].innerHTML = userFirstName.value + " " + userLastName.value;
   for (i = 0; i < userGender.length; i++) {
     if (userGender[i].checked) {
-      selectedTds[1].textContent = userGender[i].value;
+      selectedTds[2].textContent = userGender[i].value;
     }
   }
-  selectedTds[2].innerHTML = txtUserAddress.value;
-  selectedTds[3].innerHTML = countySel.value;
-  selectedTds[4].innerHTML = stateSel.value;
-  selectedTds[5].innerHTML = citySel.value;
-  selectedTds[6].innerHTML = txtUserMobileNo.value;
-  selectedTds[7].innerHTML = txtUserEmail.value;
+  selectedTds[3].innerHTML = txtUserAddress.value;
+  selectedTds[4].innerHTML = countySel.value;
+  selectedTds[5].innerHTML = stateSel.value;
+  selectedTds[6].innerHTML = citySel.value;
+  selectedTds[7].innerHTML = txtUserMobileNo.value;
+  selectedTds[8].innerHTML = txtUserEmail.value;
   selectedTr.removeAttribute("style");
 }
 // Reseting the Value After Submit
-function resetValue(){
+function resetValue() {
   userFirstName.value = "";
   userLastName.value = "";
   rdbMaleGender.checked = false;
@@ -386,13 +397,194 @@ function resetValue(){
   citySel.value = "";
   chkFormData.checked = false;
 }
-// Pop Up Function 
-function popUp(){
-  markContainer.style.display="flex";
-}
+// Function PopUp
+function popUp(tblTdMarkup) {
+  debugger;
+  let parentTr = tblTdMarkup.parentNode;
+  let displayUserName = document.getElementById("displayUserName");
+  displayUserName.innerHTML = parentTr.children[1].innerText;
+};
 // close Function 
 let closeDynamic = document.getElementById("closeDynamic");
-closeDynamic.addEventListener("click",function(){
-  markContainer.style.display="none";
+closeDynamic.addEventListener("click", function () {
+  markContainer.style.display = "none";
+});
+//
+
+let addRow = document.getElementById("addRow");
+addRow.addEventListener("click", function () { 
+  dynamicDivFormation();
 });
 
+function dynamicDivFormation() {
+  debugger;
+  console.log("hey u clicked add row button");
+  let dynamicallyCreatedDiv = document.createElement("div");
+  dynamicallyCreatedDiv.classList.add("displayDynamic");
+  // fillSubjects();
+  let dynamicallyCreatedSelect = document.createElement("select");
+  dynamicallyCreatedSelect.classList.add("displaySubject");
+  let dynamicallyCreatedOption0 = document.createElement("option");
+  dynamicallyCreatedOption0.innerHTML = "Select subject";
+  dynamicallyCreatedOption0.value = "";
+  dynamicallyCreatedOption0.setAttribute("selected", "Select Subject");
+  dynamicallyCreatedOption0.disabled = true;
+  let dynamicallyCreatedOption1 = document.createElement("option");
+  dynamicallyCreatedOption1.innerHTML = "English";
+  let dynamicallyCreatedOption2 = document.createElement("option");
+  dynamicallyCreatedOption2.innerHTML = "Hindi";
+  let dynamicallyCreatedOption3 = document.createElement("option");
+  dynamicallyCreatedOption3.innerHTML = "French";
+  let dynamicallyCreatedOption4 = document.createElement("option");
+  dynamicallyCreatedOption4.innerHTML = "Mathametics";
+  let dynamicallyCreatedOption5 = document.createElement("option");
+  dynamicallyCreatedOption5.innerHTML = "Physics";
+  let dynamicallyCreatedOption6 = document.createElement("option");
+  dynamicallyCreatedOption6.innerHTML = "Chemistry";
+  let dynamicallyCreatedOption7 = document.createElement("option");
+  dynamicallyCreatedOption7.innerHTML = "Biology";
+  let dynamicallyCreatedOption8 = document.createElement("option");
+  dynamicallyCreatedOption8.innerHTML = "Moral Values";
+  let dynamicallyCreatedOption9 = document.createElement("option");
+  dynamicallyCreatedOption9.innerHTML = "Social Science";
+  let dynamicallyCreatedOption10 = document.createElement("option");
+  dynamicallyCreatedOption10.innerHTML = "General Awarness"
+  let dynamicallyCreatedInput = document.createElement("input");
+  dynamicallyCreatedInput.classList.add("displaySubjectMarks");
+  dynamicallyCreatedInput.setAttribute("placeholder", "Marks");
+  let dynamicallyCreatedAddOn = document.createElement("button");
+  dynamicallyCreatedAddOn.classList.add("btn", "btn-sm", "btn-primary");
+  dynamicallyCreatedAddOn.innerHTML = "+";
+  dynamicallyCreatedAddOn.addEventListener("click", function () {
+    let parentDiv = dynamicallyCreatedAddOn.parentNode;
+    let parentMainDiv = parentDiv.parentNode;
+    if (parentMainDiv.children.length === 10) {
+      dynamicallyCreatedAddOn.disabled = true;
+    }
+    else {
+      dynamicDivFormation();
+      dynamicallyCreatedAddOn.disabled = false;
+    }
+  });
+  let dynamicallyCreatedRowDelete = document.createElement("button");
+  dynamicallyCreatedRowDelete.classList.add("btn", "btn-sm", "btn-primary");
+  dynamicallyCreatedRowDelete.innerHTML = "-";
+  dynamicallyCreatedRowDelete.addEventListener("click", function () {
+    let parentDiv = dynamicallyCreatedRowDelete.parentNode;
+    parentDiv.parentNode.removeChild(parentDiv);
+  });
+
+  dynamicallyCreatedDiv.appendChild(dynamicallyCreatedSelect);
+  dynamicallyCreatedSelect.appendChild(dynamicallyCreatedOption0);
+  dynamicallyCreatedSelect.appendChild(dynamicallyCreatedOption1);
+  dynamicallyCreatedSelect.appendChild(dynamicallyCreatedOption2);
+  dynamicallyCreatedSelect.appendChild(dynamicallyCreatedOption3);
+  dynamicallyCreatedSelect.appendChild(dynamicallyCreatedOption5);
+  dynamicallyCreatedSelect.appendChild(dynamicallyCreatedOption6);
+  dynamicallyCreatedSelect.appendChild(dynamicallyCreatedOption7);
+  dynamicallyCreatedSelect.appendChild(dynamicallyCreatedOption8);
+  dynamicallyCreatedSelect.appendChild(dynamicallyCreatedOption9);
+  dynamicallyCreatedSelect.appendChild(dynamicallyCreatedOption10);
+  dynamicallyCreatedDiv.appendChild(dynamicallyCreatedInput);
+  dynamicallyCreatedDiv.appendChild(dynamicallyCreatedAddOn);
+  dynamicallyCreatedDiv.appendChild(dynamicallyCreatedRowDelete);
+  displayMainDiv.appendChild(dynamicallyCreatedDiv);
+}
+submitButton.addEventListener("click", function () {
+  debugger;
+  validateDiv(displayMainDiv);
+  dynamicMark(submitButton, studentMarkDetail);
+  let parentDiv = submitButton.parentNode;
+  parentDiv.children[1].innerHTML="";
+  parentDiv.children[2].value="";
+  markContainer.style.display = "none";
+});
+
+// function fillSubjects(){
+//   let option = 
+//   let subjectArray = ["English","Hindi","French","Mathametics","Physics","Chemistry"];
+//   subjectArray.forEach(function(item){
+    
+//   });
+// }
+
+function validateDiv(displayMainDiv) {
+  if (displayUserSemester.value === "") {
+    displayUserSemester.style.border = "1px solid red";
+    alert("Please Fill Student Semester");
+  }
+  else {
+    displayUserSemester.style.border = "1px solid green";
+  }
+  let selectedDiv = displayMainDiv.children;
+  for (i = 0; i < selectedDiv.length; i++) {
+    if (selectedDiv[i].children[0].value === "") {
+      selectedDiv[i].children[0].style.border = "1px solid red";
+      alert("Please Select Subject");
+    }
+    else {
+      selectedDiv[i].children[0].style.border = "1px solid green";
+    }
+    if (selectedDiv[i].children[1].value === "") {
+      selectedDiv[i].children[1].style.border = "1px solid red";
+      alert("Please Fill Marks");
+    }
+    else {
+      selectedDiv[i].children[1].style.border = "1px solid green";
+    }
+  }
+}
+
+function dynamicMark(submitButton, studentMarkDetail) {
+  let divMarkDetail = document.createElement("div");
+  let paraMarkDetail = document.createElement("p");  
+  let paraSemesterMarkDetail = document.createElement("p");
+  let divSubjectMarkContainer=document.createElement("div");
+  
+  let EditButton=document.createElement("button");
+  EditButton.innerText="Edit";
+  EditButton.classList.add("btn", "btn-sm", "btn-primary");
+  EditButton.addEventListener("click",function(){
+    debugger;
+    markContainer.style.display = "flex";   
+    let markDetailDiv = markContainer.children[0].children[3].children;    
+    let parentPlacingDiv = EditButton.parentNode; 
+    parentPlacingDiv.style.backgroundColor="pink";
+    placingValueInPopUp(parentPlacingDiv,markDetailDiv);
+    
+  });
+  let parentDiv = submitButton.parentNode;
+  paraMarkDetail.innerHTML ="Student Name : " + parentDiv.children[1].innerHTML;
+  paraSemesterMarkDetail.innerHTML= "Semester : " + parentDiv.children[2].value;  
+    let selectedDiv = parentDiv.children[3].children;    
+    for(i=0;i<selectedDiv.length;i++){
+      let subjectMarkDiv = document.createElement("div");
+      let subjectMarkDetail=document.createElement("input");
+      let paraSubjectMarkDetail = document.createElement("input");
+      subjectMarkDetail.value += selectedDiv[i].children[0].value;
+      paraSubjectMarkDetail.value +=  selectedDiv[i].children[1].value;
+      subjectMarkDiv.appendChild(subjectMarkDetail);
+      subjectMarkDiv.appendChild(paraSubjectMarkDetail);
+      divSubjectMarkContainer.appendChild(subjectMarkDiv);
+      selectedDiv[i].children[0].value="";
+      selectedDiv[i].children[1].value="";
+    }
+  divMarkDetail.appendChild(paraMarkDetail);
+  divMarkDetail.appendChild(paraSemesterMarkDetail);  
+  divMarkDetail.appendChild(divSubjectMarkContainer);
+  divMarkDetail.appendChild(EditButton);
+  studentMarkDetail.appendChild(divMarkDetail);
+} 
+
+function placingValueInPopUp(parentPlacingDiv,markDetailDiv){
+  displayUserName.innerHTML=parentPlacingDiv.children[0].innerText.split(" ")[3] + " " + parentPlacingDiv.children[0].innerText.split(" ")[4];
+  displayUserSemester.value=parentPlacingDiv.children[1].innerText.split(" ")[2];
+  let selectedDiv = parentPlacingDiv.children[2].children;
+  for(i=0;i<selectedDiv.length;i++){
+    for(j=0;j<markDetailDiv.length;j++){
+      debugger;
+    markDetailDiv[j].children[0].value = selectedDiv[i].children[0].value;
+    markDetailDiv[j].children[1].value = selectedDiv[i].children[1].value;    
+    }
+  } 
+}
