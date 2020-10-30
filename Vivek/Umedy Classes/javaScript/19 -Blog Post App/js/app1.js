@@ -152,18 +152,16 @@ function userTableGenerate() {
     myTable.appendChild(table);
 }
 // Edit Click Function
-function editClick(){
+// function editClick(){
 
-}
-
-function deleteUser(deleteButton){
-    if(confirm("Do you want to Delete this User?")){
-        let parentTr = deleteButton.parentNode.parentNode;
-        parentTr.parentNode.removeChild(parentTr);
-        let selectedTd=parentTr.querySelectorAll(".tableEachCell");
-        objectDetailUser
-        }
-    }
-}
+// }
+// function deleteUser(deleteButton){
+//     if(confirm("Do you want to Delete this User?")){
+//         let parentTr = deleteButton.parentNode.parentNode;
+//         parentTr.parentNode.removeChild(parentTr);
+//         // let selectedTd=parentTr.querySelectorAll(".tableEachCell");
+//         }
+//     }
+// }
 
 
