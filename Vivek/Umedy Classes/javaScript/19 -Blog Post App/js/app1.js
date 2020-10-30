@@ -1,5 +1,6 @@
 let userFullName = document.getElementById("userFullName");
 var loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
+var objectDetailUser = JSON.parse(localStorage.getItem("objectDetailUser"));
 
 userFullName.innerText = loggedInUser.firstname + " " + loggedInUser.lastname;
 let dropdownUserSignOut = document.getElementById("dropdownUserSignOut");
@@ -43,32 +44,6 @@ function editValueToProfile() {
         }
     });
 }
-
-// for (j = 0; j < objectDetailUser.length; j++) {
-//     let objectToArray=Object.value(objectDetailUser[j])
-//     objectToArray.forEach(function(user){
-//         let profileUserValuePlacing = document.querySelectorAll(".UserInfoFromLocalStorage");
-//         for (i = 0; i < profileUserValuePlacing.length; i++) {
-//             if (i === j) {
-//                 profileUserValuePlacing[i].innerText = objectToArray.user;                    
-//             }
-//         }    
-//     });
-//         // let objectToArray = Object.values(objectDetailUser);
-// } 
-
-
-// objectDetailUser.forEach(function(user){
-//     let profileUserValuePlacing = document.querySelectorAll(".UserInfoFromLocalStorage");
-//     for (i = 0; i < profileUserValuePlacing.length; i++) {
-//         profileUserValuePlacing[i].innerText = user.;
-
-//     }
-
-// }); 
-
-// }
-
 let editProfileBtn = document.getElementById("editProfileBtn");
 editProfileBtn.addEventListener("click", function () {
     debugger;
@@ -123,57 +98,72 @@ editProfileBtn.addEventListener("click", function () {
     }
 });
 
-function userTableGenerate() {  
-    debugger;
-        let myTable = document.querySelector("#tableBox");
-        let table = document.getElementById("tblData");
-        let headers = ["UserName", "Password", "Admin", "First Name", "Last Name", "Password", "Edit", "Delete"];
-        let tableHead = document.createElement("thead");
-        let headerRow = document.createElement("tr");       
-        headers.forEach(headerText => {
-            let header = document.createElement("th");
-            header.setAttribute("scope", "col")
-            let textNode = document.createTextNode(headerText);
-            header.appendChild(textNode);
-            headerRow.appendChild(header);
-            tableHead.appendChild(headerRow);       
-        });
-        table.appendChild(tableHead);
-        let tableBody = document.createElement("tbody");
-        var objectDetailUser = JSON.parse(localStorage.getItem("objectDetailUser"));
-        objectDetailUser.forEach(per => {
-            let row = document.createElement("tr");
-            row.setAttribute("scope", "row")
-            Object.values(per).forEach(text => {
-                let cell = document.createElement("td");
-                // cell.setAttribute("scope","col")
-                let textNode = document.createTextNode(text);
-                cell.appendChild(textNode);
-                row.appendChild(cell);
-                tableBody.appendChild(row);
-            })
-            let editCell = document.createElement("td");
-            let editButton = document.createElement("button");
-            editButton.setAttribute("class", "btn btn-primary");
-            editButton.innerHTML = "Edit";
-            let deleteCell = document.createElement("td");
-            let deleteButton = document.createElement("button");
-            deleteButton.setAttribute("class", "btn btn-primary");
-            deleteButton.innerHTML = "Delete";
-            editCell.appendChild(editButton);
-            deleteCell.appendChild(deleteButton);
-            row.appendChild(editCell);
-            row.appendChild(deleteCell);
-            table.appendChild(tableBody);
+function userTableGenerate() {
+    let myTable = document.querySelector("#tableBox");
+    let table = document.getElementById("tblData");
+    let headers = ["UserName", "Password", "Admin", "First Name", "Last Name", "Password", "Edit", "Delete"];
+    let tableHead = document.createElement("thead");
+    let headerRow = document.createElement("tr");
+
+    headers.forEach(headerText => {
+        let header = document.createElement("th");
+        header.setAttribute("scope", "col")
+        let textNode = document.createTextNode(headerText);
+        header.appendChild(textNode);
+        headerRow.appendChild(header);
+        tableHead.appendChild(headerRow);
+    });
+    table.appendChild(tableHead);
+    let tableBody = document.createElement("tbody");
+    objectDetailUser.forEach(per => {
+        let row = document.createElement("tr");
+        row.setAttribute("class", "tableEachRow")
+        row.setAttribute("scope", "row")
+        Object.values(per).forEach(text => {
+            let cell = document.createElement("td");
+            cell.setAttribute("class", "tableEachCell")
+            let textNode = document.createTextNode(text);
+            cell.appendChild(textNode);
+            row.appendChild(cell);
+            tableBody.appendChild(row);
         })
-        myTable.appendChild(table);
+        let editCell = document.createElement("td");
+        let editButton = document.createElement("button");
+        editButton.setAttribute("class", "btn btn-primary");
+        editButton.setAttribute("id", "userEditBtn")
+        editButton.innerHTML = "Edit";
+        editButton.addEventListener("click",function(){
+            editClick();
+        });
+        let deleteCell = document.createElement("td");
+        let deleteButton = document.createElement("button");
+        deleteButton.setAttribute("id", "userDeleteBtn")
+        deleteButton.setAttribute("class", "btn btn-primary");
+        deleteButton.innerHTML = "Delete";
+        deleteButton.addEventListener("click",function(){
+            deleteUser(deleteButton);
+        });
+        editCell.appendChild(editButton);
+        deleteCell.appendChild(deleteButton);
+        row.appendChild(editCell);
+        row.appendChild(deleteCell);
+        table.appendChild(tableBody);
+    })
+    myTable.appendChild(table);
+}
+// Edit Click Function
+function editClick(){
+
+}
+
+function deleteUser(deleteButton){
+    if(confirm("Do you want to Delete this User?")){
+        let parentTr = deleteButton.parentNode.parentNode;
+        parentTr.parentNode.removeChild(parentTr);
+        let selectedTd=parentTr.querySelectorAll(".tableEachCell");
+        objectDetailUser
+        }
     }
-     
-
-
-
-
-
-
+}
 
 
