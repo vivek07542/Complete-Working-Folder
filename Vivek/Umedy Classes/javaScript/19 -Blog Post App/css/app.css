@@ -25,4 +25,132 @@ body{
     background-color: white;   
     padding-left: 30px;
 }
-
+.markContainer{
+    width:100vw;
+    min-height:50vw;
+    background-color: rgba(0,0,0,0.7);
+    position: absolute;
+    top:0;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+  }
+  .markContent{
+    width:800px;  
+    min-height:300px;
+    height:auto;
+    background-color: white;
+    border-radius: 4px;
+    padding:20px;
+    text-align: center;  
+    position: relative;
+    padding-bottom:60px;
+    font-size: 14px;
+  }
+  .close{
+    transform: rotate(45deg);
+  }
+  /* CSS for Horizontal Tab */
+  .tab {
+    overflow: hidden;
+    width: 600px;
+  }
+  
+  /* Style the buttons inside the tab */
+  .tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+    width:190px;
+  }
+  
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+    background-color: #ddd;
+  }
+  
+  /* Create an active/current tablink class */
+  .tab button.active {
+    background-color: #ccc;
+  }
+  
+  /* Style the tab content */
+  .tabcontent {
+    display: none;
+    padding: 15px 12px;
+    /* border: 1px solid #ccc; */
+    border-top: none;
+    min-height: 530px;
+    width:80%;
+    margin:10px auto;
+    background-color: white;
+  }
+  #horizontal-tab{
+      width:600px;
+  }
+  #createPostPopup{
+      display:none;      
+  }
+  .divSelUser{
+    width:80%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;  
+    padding:0 10px;  
+  }
+  #selectUserPopup{
+    display:none;
+  }
+  #createUserForPost{
+    column-count: 3;
+    column-fill: auto;
+    min-height: 20px;
+  }  
+  .jumboEdit{
+    min-height:500px;
+  }
+  .postDiv{
+    border:1px solid grey;
+    width:60%;
+    border-radius:7px;
+    margin:15px auto;
+    background-color: white;
+  }
+.userPostDetail{
+  margin:10px 0;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 550;
+  color:rgba(0,0,0,0.6);
+}
+.localStoragePost{
+  margin:10px 0;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 550;
+  /* color:rgba(0,0,0,0.9); */
+  position: relative;
+}
+.seeMoreBtn{
+  position: absolute;
+  right:20px;
+  bottom:0;
+  font-size: 13px;
+  font-weight: 400;
+  color:rgba(0,0,0,0.4)
+}
+.postText{
+  width:65%;
+  min-height: 30px;
+  margin:0 auto;
+  /* border:1px solid red; */
+}

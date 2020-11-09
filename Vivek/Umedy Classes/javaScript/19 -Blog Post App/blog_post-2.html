@@ -17,10 +17,14 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true"
                         aria-expanded="false">Posts <span class="sr-only">(current)</span></a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" id="dropdownUserProfile">Pending Approvals</a>
-                        <a class="dropdown-item" id="">All Posts</a>
-                        <a class="dropdown-item" id="">Promotional Posts</a>
+                    <div class="dropdown-menu" id="horizontal-tab" aria-labelledby="navbarDropdown">
+                        <div class="tab">
+                            <button class="tablinks" id="pendingPost" onclick="openCity(event, 'London')">Pending
+                                Approvals</button>
+                            <button class="tablinks" id="allPost" onclick="openCity(event, 'Paris')">All Posts</button>
+                            <button class="tablinks" id="promotionalPost" onclick="openCity(event, 'Tokyo')">Promotional
+                                Posts</button>
+                        </div>
                     </div>
                 </li>
             </ul>
@@ -33,7 +37,8 @@
                                 <span id="userFullName"></span>
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" id="dropdownUserProfile" onclick="dropdownProfile()">Profile</a>
+                                <a class="dropdown-item" id="dropdownUserProfile"
+                                    onclick="dropdownProfile()">Profile</a>
                                 <a class="dropdown-item" id="dropdownUserSignOut">SignOut</a>
                             </div>
                         </li>
@@ -42,59 +47,146 @@
             </form>
         </div>
     </nav>
+    <div id="London" class="tabcontent">
+        <div class="container">
+            <div class="jumbotron jumboEdit">
+                <div>
+                    <button class="btn btn-primary float-right createNewPostBtn" onclick="PopupClickEvent()">Create Post</button>
+                </div>
+                <div id="sorting"></div>
+                <h4 class="display-3">Pending Post</h4>
+                <div id="postDisplayDivDynamicallyForApproval"></div>
+            </div>
+        </div>
+    </div>
+    <div id="Paris" class="tabcontent">
+        <div class="container">
+            <div class="jumbotron jumboEdit">
+                <div>
+                    <button class="btn btn-primary float-right createNewPostBtn" onclick="PopupClickEvent()">Create Post</button>
+                </div>
+                <div id="sorting"></div>
+                <h4 class="display-3">All Post</h4>
+                <div id="postDisplayDivDynamically"></div>
+            </div>
+        </div>
+    </div>
+    <div id="Tokyo" class="tabcontent">
+        <div class="container">
+            <div class="jumbotron jumboEdit">
+                <div>
+                    <button class="btn btn-primary float-right createNewPostBtn" onclick="PopupClickEvent()">Admin Create Post</button>
+                </div>
+                <div id="sorting"></div>
+                <h4 class="display-3">Admin Post</h4>
+                <div id="postDisplayDivForAdmin"></div>
+            </div>
+        </div>
+    </div>
     <div class="row" id="verticalTab">
         <div class="col-2 form-control" id="leftSideDiv">
             <div class="list-group" id="list-tab" role="tablist">
-                <a class="list-group-item list-group-item-action form-control active" id="myProfileTab" data-toggle="list"
-                    href="#list-home" role="tab" onclick="editValueToProfile()">My Profile</a>
-                <a class="list-group-item list-group-item-action form-control" id="userForAdminTab" onclick="userTableGenerate()" data-toggle="list"
-                    href="#list-profile" role="tab">Users</a>
+                <a class="list-group-item list-group-item-action form-control active" id="myProfileTab"
+                    data-toggle="list" href="#list-home" role="tab" onclick="editValueToProfile()">My Profile</a>
+                <a class="list-group-item list-group-item-action form-control" id="userForAdminTab"
+                    onclick="userTableGenerate()" data-toggle="list" href="#list-profile" role="tab">Users</a>
             </div>
         </div>
         <div class="col-10">
             <div class="tab-content" id="nav-tabContent">
                 <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
-                 <div class="jumbotron text-center my-5" id="myprofileDiv">
-                    <div class="form-group row justify-content-across">
-                        <label class="col-sm-2">UserName:</label>
-                        <div class="col-sm-4">
-                          <p class="UserInfoFromLocalStorage"></p>
+                    <div class="jumbotron text-center my-5" id="myprofileDiv1">
+                        <div class="form-group row justify-content-across">
+                            <label class="col-sm-2">UserName:</label>
+                            <div class="col-sm-4">
+                                <p class="UserInfoFromLocalStorage"></p>
+                            </div>
+                            <label class="col-sm-2">Password:</label>
+                            <div class="col-sm-4">
+                                <p class="UserInfoFromLocalStorage"></p>
+                            </div>
+                            <label class="col-sm-2">Role:</label>
+                            <div class="col-sm-4">
+                                <p class="UserInfoFromLocalStorage"></p>
+                            </div>
+                            <label class="col-sm-2">First Name:</label>
+                            <div class="col-sm-4">
+                                <p class="UserInfoFromLocalStorage"></p>
+                            </div>
+                            <label class="col-sm-2">Last Name:</label>
+                            <div class="col-sm-4">
+                                <p class="UserInfoFromLocalStorage"></p>
+                            </div>
+                            <label class="col-sm-2">Mobile No.:</label>
+                            <div class="col-sm-4">
+                                <p class="UserInfoFromLocalStorage"></p>
+                            </div>
                         </div>
-                        <label class="col-sm-2">Password:</label>
-                        <div class="col-sm-4">
-                          <p class="UserInfoFromLocalStorage"></p>
-                        </div>
-                        <label class="col-sm-2">Role:</label>
-                        <div class="col-sm-4">
-                          <p class="UserInfoFromLocalStorage"></p>
-                        </div>                        
-                        <label class="col-sm-2">First Name:</label>
-                        <div class="col-sm-4">
-                          <p class="UserInfoFromLocalStorage"></p>
-                        </div>
-                        <label class="col-sm-2">Last Name:</label>
-                        <div class="col-sm-4">
-                          <p class="UserInfoFromLocalStorage"></p>
-                        </div>
-                        <label class="col-sm-2">Mobile No.:</label>
-                        <div class="col-sm-4">
-                          <p class="UserInfoFromLocalStorage"></p>
-                        </div>
+                        <button class="btn btn-primary" id="editProfileBtn">Edit</button>
                     </div>
-                   <button class="btn btn-primary" id="editProfileBtn">Edit</button>
-                 </div>   
                 </div>
                 <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
-                    <div class="jumbotron text-center my-5" id="myprofileDiv">
+                    <div class="jumbotron text-center my-5" id="myprofileDiv2">
                         <div>
                             <button class="btn btn-primary my-4 float-right" id="createNewUserBtn">Create User</button>
                         </div>
-                        <div id="tableBox"> 
-                            <h3 class="display-7">Users Detail</h3>                           
+                        <div id="tableBox">
+                            <h3 class="display-7">Users Detail</h3>
                             <table class="table table-striped" id="tblData"></table>
-                        </div>                        
+                        </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+    <div class="markContainer " id="markContainer">
+        <div class="markContent" id="markContent">
+            <div class="close" id="closeDynamic">+</div>
+            <div class="jumbotron text-center my-5" id="myProfileDiv">
+                <div class="form-group row justify-content-across">
+                    <label class="col-sm-2 py-1">UserName:</label>
+                    <div class="col-sm-4 py-1">
+                        <input class="createUserInputData form-control">
+                    </div>
+                    <label class="col-sm-2 py-1">Password:</label>
+                    <div class="col-sm-4 py-1">
+                        <input class="createUserInputData form-control">
+                    </div>
+                    <label class="col-sm-2 py-1">Role:</label>
+                    <div class="col-sm-4 py-1">
+                        <input class="createUserInputData form-control">
+                    </div>
+                    <label class="col-sm-2 py-1">First Name:</label>
+                    <div class="col-sm-4 py-1">
+                        <input class="createUserInputData form-control">
+                    </div>
+                    <label class="col-sm-2 py-1">Last Name:</label>
+                    <div class="col-sm-4 py-1">
+                        <input class="createUserInputData form-control">
+                    </div>
+                    <label class="col-sm-2 py-1">Mobile No.:</label>
+                    <div class="col-sm-4 py-1">
+                        <input class="createUserInputData form-control">
+                    </div>
+                </div>
+                <button class="btn btn-primary submitButton" id="createdUserDetailSubmitBtn">Submit</button>
+            </div>
+            <div class="jumbotron text-center my-5" id="createPostPopup">
+                <h3 class="display-5 float-left my-1">Create Post</h3>
+                <div class="form-group">
+                    <form>
+                        <textarea class="form-control" id="userTextPost" name="message" placeholder="Write Post..."
+                            rows="3" onkeyup="limitText(this.form.message,this.form.outputText,100)"></textarea>
+                        <br>You have
+                        <input readonly type="text" name="outputText" size="3" value="100"> chars left<br>
+                    </form>
+                </div>
+                <button class="btn btn-primary submitButton" id="userCreatePostBtn" onclick="createPost()">Post</button>
+            </div>
+            <div class="jumbotron text-center my-5" id="selectUserPopup">
+                <h3 class="display-5 my-1">Select User</h3>
+                <div class="form-group" id="createUserForPost"></div>
+                <button class="btn btn-primary" id="userSelectedBtn" >Submit</button>
             </div>
         </div>
     </div>
