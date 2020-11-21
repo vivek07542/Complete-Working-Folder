@@ -2,7 +2,6 @@ var loginUserName = document.getElementById("loginUserName");
 var userPassword = document.getElementById("userPassword");
 var loginSubmit = document.getElementById("loginSubmit");
 var textIfFail = document.getElementById("textIfFail");
-
 loginSubmit.addEventListener("click",function(){
     if (validation()) {
         setDetailOfAdmin();
@@ -73,4 +72,3 @@ function loadingStartAndStop(){
     let loadingDiv=document.getElementById("loadingDiv");      
     loadingDiv.style.display="none";
    }
-
