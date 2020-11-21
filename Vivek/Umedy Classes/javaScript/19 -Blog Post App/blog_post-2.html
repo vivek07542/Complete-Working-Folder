@@ -98,10 +98,10 @@
     </div>
     <div class="row" id="verticalTab">
         <div class="col-2 form-control sideBar" id="leftSideDiv">
-            <div class="list-group" id="list-tab" role="tablist">
-                <a class="list-group-item list-group-item-action form-control active" id="myProfileTab"
+            <div class="list-group row" id="list-tab" role="tablist">
+                <a class=" col-12 my-2 text-center list-group-item list-group-item-action form-control active" id="myProfileTab"
                     data-toggle="list" href="#list-home" role="tab" onclick="editValueToProfile()"></i>My Profile</a>
-                <a class="list-group-item list-group-item-action form-control" id="userForAdminTab" data-toggle="list"
+                <a class=" col-12 my-2 text-center list-group-item list-group-item-action form-control" id="userForAdminTab" data-toggle="list"
                     href="#list-profile" role="tab">Users</a>
             </div>
         </div>
@@ -110,27 +110,27 @@
                 <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
                     <div class="jumbotron text-center my-5" id="myprofileDiv1">
                         <div class="form-group row justify-content-across">
-                            <label class="col-sm-2">UserName:</label>
+                            <label class="col-sm-2 font-weight-bold">UserName:</label>
                             <div class="col-sm-4">
                                 <p class="UserInfoFromLocalStorage"></p>
                             </div>
-                            <label class="col-sm-2">Password:</label>
+                            <label class="col-sm-2 font-weight-bold">Password:</label>
                             <div class="col-sm-4">
                                 <p class="UserInfoFromLocalStorage"></p>
                             </div>
-                            <label class="col-sm-2">Role:</label>
+                            <label class="col-sm-2 font-weight-bold">Role:</label>
                             <div class="col-sm-4">
                                 <p class="UserInfoFromLocalStorage"></p>
                             </div>
-                            <label class="col-sm-2">First Name:</label>
+                            <label class="col-sm-2 font-weight-bold">First Name:</label>
                             <div class="col-sm-4">
                                 <p class="UserInfoFromLocalStorage"></p>
                             </div>
-                            <label class="col-sm-2">Last Name:</label>
+                            <label class="col-sm-2 font-weight-bold">Last Name:</label>
                             <div class="col-sm-4">
                                 <p class="UserInfoFromLocalStorage"></p>
                             </div>
-                            <label class="col-sm-2">Mobile No.:</label>
+                            <label class="col-sm-2 font-weight-bold">Mobile No.:</label>
                             <div class="col-sm-4">
                                 <p class="UserInfoFromLocalStorage"></p>
                             </div>
@@ -143,10 +143,10 @@
                         <div>
                             <button class="btn btn-primary my-4 float-right" id="createNewUserBtn">Create User</button>
                         </div>
-                        <div id="tableBox">
-                            <h3 class="display-7">Users Detail</h3>
+                        <div id="tableBox row">
+                            <h3 class="display-7 col-12">Users Detail</h3>
                             <table class="table table-striped" id="tblData"></table>
-                            <div class="pageNumbers" id="pagination3"></div>
+                            <div class="pageNumbers col-12" id="pagination3"></div>
                         </div>
                     </div>
                 </div>
@@ -158,30 +158,30 @@
             <div class="close" id="closeDynamic">+</div>
             <div class="jumbotron text-center my-5" id="myProfileDiv">
                 <div class="form-group row justify-content-across">
-                    <label class="col-sm-2 py-1">UserName:</label>
+                    <label class="col-sm-2 font-weight-bold py-1">UserName:</label>
                     <div class="col-sm-4 py-1">
                         <input class="createUserInputData form-control">
                     </div>
-                    <label class="col-sm-2 py-1">Password:</label>
+                    <label class="col-sm-2 font-weight-bold py-1">Password:</label>
                     <div class="col-sm-4 py-1">
                         <input class="createUserInputData form-control">
                     </div>
-                    <label class="col-sm-2 py-1">Role:</label>
+                    <label class="col-sm-2 font-weight-bold py-1">Role:</label>
                     <div class="col-sm-4 py-1">
                         <select class="createUserInputData form-control">
                             <option>admin</option>
                             <option>user</option>
                         </select>
                     </div>
-                    <label class="col-sm-2 py-1">First Name:</label>
+                    <label class="col-sm-2 font-weight-bold py-1">First Name:</label>
                     <div class="col-sm-4 py-1">
                         <input class="createUserInputData form-control">
                     </div>
-                    <label class="col-sm-2 py-1">Last Name:</label>
+                    <label class="col-sm-2 font-weight-bold py-1">Last Name:</label>
                     <div class="col-sm-4 py-1">
                         <input class="createUserInputData form-control">
                     </div>
-                    <label class="col-sm-2 py-1">Mobile No.:</label>
+                    <label class="col-sm-2 font-weight-bold py-1">Mobile No.:</label>
                     <div class="col-sm-4 py-1">
                         <input class="createUserInputData form-control">
                     </div>
