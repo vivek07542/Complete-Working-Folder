@@ -14,7 +14,7 @@
     <div class="container my-5">
         <h1 class="display-4">Blog post Login</h1>
         <div class="jumbotron">
-            <small class="form-text text-muted textIfFail" id="textIfFail">Please get Approval From Admin.</small>
+            <small class="form-text text-muted textIfFail" id="textIfFail">Please get Approval From Admin Or Check UserName & Password.</small>
             <form>
                 <div class="form-group">
                     <label for="exampleInputEmail1">User Name</label>
@@ -26,6 +26,11 @@
                 </div>
                 <a type="submit" class="btn btn-primary" id="loginSubmit">Submit</a>
             </form>
+        </div>
+    </div>
+    <div class="loading" id="loadingDiv">
+        <div class=loadingBox>
+            <img src="images/load-img.gif" alt="pageLoading" class="image_gif">
         </div>
     </div>
     <script src="js/app.js"></script>

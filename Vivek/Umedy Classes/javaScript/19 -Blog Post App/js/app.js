@@ -36,7 +36,7 @@ function setDetailOfAdmin() {
             role: "admin",
             firstname: "Vivek",
             lastname: "Bindal",
-            phoneNumber: 8888269609,
+            phonenumber: 8888269609,
         }
         userArrayDetail.push(userDetail);
         localStorage.setItem("objectDetailUser", JSON.stringify(userArrayDetail));
@@ -48,12 +48,29 @@ function varificationOfUser() {
         if (loginUserName.value === arrayObjectAllUser[i].username && userPassword.value === arrayObjectAllUser[i].password) {
             loginUserName.value = "";
             var selectedUser=arrayObjectAllUser[i];
-            localStorage.setItem("loggedInUser",JSON.stringify(selectedUser));
-            document.location.href = "blog_post-2.html";
+            localStorage.setItem("loggedInUser",JSON.stringify(selectedUser)); 
+            textIfFail.style.display = "none";
+            loadingStartAndStop();
+            setTimeout(function(){ document.location.href = "blog_post-2.html";}, 3000);  
             break;
         }
         else {
             textIfFail.style.display = "block";
         }
     }
-} 
+}
+
+function loadingWait(){
+    let loadingDiv=document.getElementById("loadingDiv");      
+    loadingDiv.style.display="flex";
+   } 
+
+function loadingStartAndStop(){
+    setTimeout(loadingWait, 1000)
+    setTimeout(stopLoadWait,3000)
+}
+   function stopLoadWait(){
+    let loadingDiv=document.getElementById("loadingDiv");      
+    loadingDiv.style.display="none";
+   }
+
