@@ -1,0 +1,134 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    font-family: sans-serif;
+    background-color: aliceblue;
+}
+.createBox1{
+  width:100%;
+  height:100%;
+  display: block;
+}
+.createBox2{
+  display: none;
+}
+/* Style tab links */
+.tablink {
+  background-color:rgb(248,249,250);
+  color: black;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 50%;
+}
+.tablink:hover {
+  background-color: #ddd;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: black;
+  display: none;
+  padding: 50px 20px;
+  min-height:490px;
+  /* height: auto; */
+}
+#Home {background-color: red;}
+#News {background-color: green;}
+#Contact {background-color: blue;}
+#About {background-color: orange;}
+
+.box-label{
+  width:100%;
+  height:34px;
+}
+.available{
+  color:green;
+  display:none;
+}
+.notAvailable{
+  color:blue;
+  display: none;
+}
+.inputWrong{
+  border:4px solid blue;
+}
+.inputCorrect{
+  border:4px solid green;
+}
+.markContainer{
+    width:100vw;
+    min-height:590px;
+    /* height:90vw; */
+    /* overflow-y:inherit; */
+    background-color: rgba(10, 10, 10, 0.7);
+    position: absolute;
+    top:0;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    z-index: 100;
+  }
+  .markContent{
+    width:800px;  
+    min-height:500px;
+    height:auto;
+    background-color: white;
+    border-radius: 4px;
+    padding:20px;
+    text-align: center;  
+    position: relative;
+    padding-bottom:60px;
+    font-size: 14px;
+  }
+  .close{
+    transform: rotate(45deg);
+  }
+  .loading{
+    width:100vw;
+    /* min-height:700px; */
+    min-height:90vw;
+    /* max-height:auto; */
+    /* overflow-y:inherit; */
+    height:auto;
+    background-color: rgba(0,0,0,0.7);
+    position: absolute;
+    top:0;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    z-index: 100;
+  }
+  .loadingBox{
+    width:800px;  
+    /* min-height:150px; */
+    max-height:auto;
+    background-color:transparent;
+    border-radius: 4px;
+    padding:20px;
+    text-align: center;  
+    position: relative;
+    padding-bottom:60px;
+    font-size: 14px;
+  }
+  .image_gif{
+    width:250px;
+    height:auto;
+  }
+  .treeGenerate{
+    width:100%;
+    min-height:300px;
+  }
+  .messageDisplayBox{
+    width:100%;
+    height:500px;
+    color:green;
+  }
+
