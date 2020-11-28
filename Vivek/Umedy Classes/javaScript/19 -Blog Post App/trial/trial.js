@@ -10,7 +10,7 @@ userFullName.innerText = loggedInUser.firstname + " " + loggedInUser.lastname;
 let dropdownUserSignOut = document.getElementById("dropdownUserSignOut");
 dropdownUserSignOut.addEventListener("click", function () {
     if (confirm("Do you want to Signout?")) {
-        document.location.href = "blog_post-1.html";
+        document.location.href = "trial1.html";
     }
 });
 // Profile Click Event

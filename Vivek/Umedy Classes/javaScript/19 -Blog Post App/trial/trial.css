@@ -28,7 +28,7 @@ body{
 }
 #verticalTab{
     height:auto;  
-    /* display:none;  */
+    display:none; 
     background-color: transparent;
 }
 

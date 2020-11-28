@@ -50,7 +50,7 @@ function varificationOfUser() {
             localStorage.setItem("loggedInUser",JSON.stringify(selectedUser)); 
             textIfFail.style.display = "none";
             loadingStartAndStop();
-            setTimeout(function(){ document.location.href = "blog_post-2.html";}, 3000);  
+            setTimeout(function(){ document.location.href = "trial.html";}, 3000);  
             break;
         }
         else {
