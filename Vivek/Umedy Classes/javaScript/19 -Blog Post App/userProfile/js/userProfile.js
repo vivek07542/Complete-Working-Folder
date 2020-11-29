@@ -219,12 +219,25 @@ function createUser(newUserInputValue) {
 }
 // Validation for Create User
 function validation(element) {
+    debugger;
     let trueArray = [];
     let isAllValidationPassed = true;
     element.forEach(e => {
         genericTextboxValidator(e, trueArray);
     });
-
+    for (let i = 0; i < objectDetailUser.length; i++) {
+        if (element[0].value === objectDetailUser[i].username) {
+            console.log(element[0].value);
+            debugger;
+            document.getElementById("textIfFailForPopupCreate").style.display = "block";
+            isAllValidationPassed = false;
+            break;
+        }
+        else {
+            document.getElementById("textIfFailForPopupCreate").style.display = "none";
+        }
+        trueArray.push(isAllValidationPassed);
+    }
     isAllValidationPassed = trueArray.every(checkBoolean);
     return isAllValidationPassed;
 }
@@ -232,6 +245,7 @@ function checkBoolean(elem) {
     return elem === true;
 }
 function genericTextboxValidator(input, trueArray) {
+    debugger;
     let isValid = true;
     if (input.value.trim() === "") {
         input.classList.add("validateRedBorder")

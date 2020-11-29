@@ -133,7 +133,6 @@ function avoidCreatePostToAdmin() {
 }
 // function for Post Event Common Function
 function launchEventsForTab(listItem,secondaryWrapper, mainWrapper, approvals){
-    debugger;
     var currentpage = 1;
     let rows = 5;
     mainWrapper.innerHTML = "";
