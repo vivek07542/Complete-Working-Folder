@@ -108,7 +108,5 @@ function genericTextboxValidator(input,index, trueArray) {
 // Save Button Click Event
 let saveBtn=document.getElementById("saveBtn");
 saveBtn.addEventListener("click",function(){
-  // document.getElementById("markContainer").style.display="flex";
-  document.getElementById("createBox2Tree").style.display="block";
-  document.getElementById("createBox1_Company").style.display="none";
+setTimeout(document.location)
 });
