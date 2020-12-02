@@ -18,15 +18,49 @@
             </a>
         </nav>
         <div class="container">
-            <div class="row align-item-center justify-content-center messageDisplayBox"> 
-                <h1 class="display-5" id="messageDisplay"> </h1>
+            <div class="row text-center py-2 messageDisplayBox"> 
+                <h1 class=" col-12 display-5" id="messageDisplay"> Message Display </h1>
+                <div class= "col-12"><span>Company Details Saved To The Data Server...</span></div>
+            </div>
+            <div class="row justify-content-center py-3">
+                <div class="tblDataDiv" id="tblDataDiv">
+                        <table class="table table-striped" id="tblData">
+                            <thead>
+                              <tr>
+                                <th scope="col">Company name</th>
+                                <th scope="col">Owner name</th>
+                                <th scope="col">Company Website</th>
+                                <th scope="col">Company Contact </th>
+                                <th scope="col">Action </th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row" class="companyDetail"> </th>
+                                <td class="companyDetail"></td>
+                                <td class="companyDetail"></td>
+                                <td class="companyDetail"></td>
+                                <td id="action">
+                                    <button class="btn btn-primary" id="showTreeBtn">Show/Edit Tree</button>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
     <div class="markContainer " id="markContainer">
         <div class="markContent" id="markContent">
             <div class="close" id="closeDynamic">+</div>
+            <div class="row d-flex justify-content-center align-item-center my-4">
+            <h2 class="col-12" id="companyName"></h2>
+            <ul class="col-4" id="backend">
 
+            </ul>
+            </div>
+            <button class="btn btn-primary my-4" id="editBtn">Edit Tree</button>
         </div>
     </div>
     <div class="loading" id="loadingDiv">
@@ -35,7 +69,8 @@
         </div>
     </div>
 </body>
-<script src="js/tree_structure.js"></script>
+<script src="js/company_tree.js"></script>
+
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
     crossorigin="anonymous"></script>
