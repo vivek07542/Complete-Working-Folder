@@ -48,7 +48,6 @@ let headers = ["Name","Age","Mobile","Email-Id","Address"];
 
 btnGet.addEventListener("click",function(){
     let tableHead = document.createElement("thead");
-
     let headerRow = document.createElement("tr");
     // headerRow.setAttribute("scope","row")
     headers.forEach(headerText => {

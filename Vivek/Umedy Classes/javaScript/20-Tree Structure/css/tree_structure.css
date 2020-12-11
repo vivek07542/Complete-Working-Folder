@@ -3,13 +3,16 @@
     padding:0;
 }
 body{
-    font-family: sans-serif;
-    background-color: aliceblue;
+  font-family: 'Open Sans', sans-serif;
+    background-color: rgb(199,238,245);
 }
 .createBox1{
   width:100%;
   height:100%;
   display: block;
+}
+.horizontal-Tab{
+  width:101.2%;
 }
 
 /* Style tab links */
@@ -27,7 +30,6 @@ body{
 .tablink:hover {
   background-color: #ddd;
 }
-
 /* Style the tab content (and add height:100% for full page content) */
 .tabcontent {
   color: black;
@@ -35,14 +37,13 @@ body{
   padding: 50px 20px;
   min-height:490px;
   /* height: auto; */
+  width:100%;
 }
-#Home {background-color: red;}
-#News {background-color: green;}
-#Contact {background-color: blue;}
-#About {background-color: orange;}
+#Home {background-color: transparent;}
+#News {background-color: transparent;}
 
 .box-label{
-  width:100%;
+  width:98%;
   height:34px;
 }
 .available{
@@ -50,20 +51,19 @@ body{
   display:none;
 }
 .notAvailable{
-  color:blue;
+  color:red;
   display: none;
 }
 .inputWrong{
-  border:4px solid blue;
+  border:1px solid red;
 }
 .inputCorrect{
-  border:4px solid green;
+  border:1px solid green;
 }
 .markContainer{
     width:100vw;
     min-height:590px;
-    /* height:90vw; */
-    /* overflow-y:inherit; */
+    height:90vw;
     background-color: rgba(10, 10, 10, 0.7);
     position: absolute;
     top:0;
@@ -87,39 +87,7 @@ body{
   }
   .close{
     transform: rotate(45deg);
-  }
-  .loading{
-    width:100vw;
-    /* min-height:700px; */
-    min-height:90vw;
-    /* max-height:auto; */
-    /* overflow-y:inherit; */
-    height:auto;
-    background-color: rgba(0,0,0,0.7);
-    position: absolute;
-    top:0;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    display: none;
-    z-index: 100;
-  }
-  .loadingBox{
-    width:800px;  
-    /* min-height:150px; */
-    max-height:auto;
-    background-color:transparent;
-    border-radius: 4px;
-    padding:20px;
-    text-align: center;  
-    position: relative;
-    padding-bottom:60px;
-    font-size: 14px;
-  }
-  .image_gif{
-    width:250px;
-    height:auto;
-  }
+  }  
   .treeGenerate{
     width:100%;
     min-height:300px;
@@ -131,50 +99,48 @@ body{
     border:1px solid green;
     border-radius: 7px;
     background-color: lightgreen;
-    text-shadow: .5px .5px 0 #000;    
+    text-shadow: .5px .5px 0 #000;
   }
-
+  .hidden{
+    display:none;
+  }
 /* Tree Structure */
+#backend{
+  list-style:none;
+}
 #backend .caret {
   position: relative;
   font-size: 1em;
   cursor: pointer;
 }
-
 #backend .caret-down {
   position: relative;
   cursor: pointer;
   /* transform: rotate(90deg); */
 }
-
 #backend .caret:before {
   content: '\25B8';
   display: inline-block;
   font-size: 17px;
   transform: rotate(90deg);
 }
-
 #backend .caret-down:before {
   content: '\25B8';
   display: inline-block;
   font-size: 17px;
   /* transform: rotate(90deg); */
 }
-
 #backend ul {
   list-style:none;
   border-left: 1px solid black;
   padding: 0;
   margin: 0;
   padding-left: 35px;
-
 }
-
 #backend ul li {
   position: relative;
   text-transform: capitalize;
 }
-
 #backend ul li:before {
   content: '';
   position: absolute;
@@ -184,51 +150,15 @@ body{
   height: 1px;
   width: 32px;
 }
-
 .nested {
   display: block;
 }
-
 .active {
   display: none;
 }
-
-/* .closeIT {
-  background-color: red;
-  color: white;
-  padding: 0.1rem 0.5rem;
-  margin-left: 5px;
-  cursor: pointer;
-} */
-
-/* input {
-  overflow: visible;
-  border: none;
+ .edit{
+  background-Color: transparent;
 }
-
-.fa {
-  pointer-events: none;
-} */
-
-/* #backend ul {
-  list-style: none;
-  border-left: 1px solid black;
-  padding: 0;
-  margin: 0;
-  padding-left: 35px;
+ .edit:hover{
+  background-color: rgba(0,0,0,0.2);
 }
-
-#backend ul li {
-  position: relative;
-  text-transform: capitalize;
-}
-
-#backend ul li:before {
-  content: '';
-  position: absolute;
-  top: 12px;
-  left: -35px;
-  background: black;
-  height: 1px;
-  width: 32px;
-} */
